@@ -1,0 +1,24 @@
+{
+  "name": "TinyLapse",
+  "short_name": "TinyLapse",
+  "description": "Baby Growth Timelapse App - Track your baby's growth with daily photos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D4F7A5",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
