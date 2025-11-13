@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TinyLapse - Redirecting...</title>
+    <script>
+      // GitHub Pages SPA redirect solution
+      // Store the current path in sessionStorage
+      sessionStorage.setItem(
+        'redirect',
+        location.pathname.slice(0, -1) === ''
+          ? '/'
+          : location.pathname + location.search + location.hash
+      );
+      // Redirect to the base URL
+      location.replace('/');
+    </script>
+  </head>
+  <body>
+    <!-- This content will not be visible because the redirect happens immediately -->
+  </body>
+</html>
