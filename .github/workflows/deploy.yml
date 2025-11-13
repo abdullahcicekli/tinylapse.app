@@ -25,15 +25,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
-      - name: Install dependencies
+      - name: Clean install
         run: |
-          if [ -f package-lock.json ]; then
-            npm ci --legacy-peer-deps
-          else
-            npm install --legacy-peer-deps
-          fi
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps
 
       - name: Build
         run: npm run build
