@@ -32,10 +32,12 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Verify vite installation
-        run: ls -la node_modules/.bin/vite || echo "Vite not found in node_modules/.bin"
+        run: |
+          ls -la node_modules/.bin/vite || echo "Vite not found"
+          which vite || echo "Vite not in PATH"
 
       - name: Build
-        run: npm run build
+        run: ./node_modules/.bin/vite build
         env:
           NODE_ENV: production
 
