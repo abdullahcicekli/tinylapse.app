@@ -3,8 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # main branch'e push olunca çalışır
-  workflow_dispatch:  # Manuel tetikleme için
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -26,20 +26,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Verify vite installation
         run: |
-          ls -la node_modules/.bin/vite || echo "Vite not found"
-          which vite || echo "Vite not in PATH"
+          if [ -f package-lock.json ]; then
+            npm ci --legacy-peer-deps
+          else
+            npm install --legacy-peer-deps
+          fi
 
       - name: Build
-        run: ./node_modules/.bin/vite build
-        env:
-          NODE_ENV: production
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -59,4 +56,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
