@@ -9,6 +9,17 @@
     <meta name="theme-color" content="#D4F7A5" />
     <link rel="manifest" href="/manifest.json" />
     <title>TinyLapse - Baby Growth Timelapse Video App for iPhone</title>
+    <script>
+      // GitHub Pages SPA redirect solution
+      // Check if there's a redirect path stored in sessionStorage
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect && redirect !== '/') {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
