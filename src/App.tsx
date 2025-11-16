@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import Router from './router'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { LanguageProvider } from './contexts/LanguageContext'
 
 // Scroll to top component
 function ScrollToTop() {
@@ -21,14 +22,16 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">
-          <Router />
-        </main>
-        <Footer />
-      </div>
+      <LanguageProvider>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">
+            <Router />
+          </main>
+          <Footer />
+        </div>
+      </LanguageProvider>
     </BrowserRouter>
   )
 }
