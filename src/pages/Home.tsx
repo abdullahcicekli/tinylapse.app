@@ -1,6 +1,7 @@
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
+import AppScreenshots from '../components/AppScreenshots'
 import VideoShowcase from '../components/VideoShowcase'
 import HowItWorks from '../components/HowItWorks'
 import UseCases from '../components/UseCases'
@@ -13,6 +14,7 @@ export default function Home() {
       <SEO />
       <Hero />
       <Features />
+      <AppScreenshots />
       <VideoShowcase />
       <HowItWorks />
       <UseCases />

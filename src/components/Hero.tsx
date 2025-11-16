@@ -1,8 +1,17 @@
 import { Smartphone, Camera, Video, Baby, Heart } from 'lucide-react'
 import Lottie from 'lottie-react'
-import onboarding1Animation from '/onboarding1.json'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
+  const [animationData, setAnimationData] = useState(null)
+
+  useEffect(() => {
+    fetch('/onboarding1.json')
+      .then(res => res.json())
+      .then(data => setAnimationData(data))
+      .catch(err => console.error('Failed to load animation:', err))
+  }, [])
+
   const stats = [
     { icon: Camera, text: 'Daily Photo Reminders' },
     { icon: Video, text: 'Timelapse Videos' },
@@ -11,7 +20,7 @@ export default function Hero() {
   ]
 
   const lottieOptions = {
-    animationData: onboarding1Animation,
+    animationData,
     loop: true,
     autoplay: true,
     rendererSettings: {
@@ -87,10 +96,12 @@ export default function Hero() {
               {/* iPhone Mockup */}
               <div className="relative bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-[3rem] p-3 sm:p-4 aspect-[9/19] w-64 sm:w-80 md:w-96 shadow-2xl">
                 <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden flex items-center justify-center">
-                  <Lottie
-                    {...lottieOptions}
-                    className="w-full h-full object-cover"
-                  />
+                  {animationData && (
+                    <Lottie
+                      {...lottieOptions}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
               </div>
             </div>
