@@ -9,9 +9,17 @@ export const tr: Translation = {
   },
 
   hero: {
-    title: 'Bebeğinizin Büyümesini Kaydedin',
-    subtitle: 'Her günü fotoğraflayın, büyümeyi izleyin. TinyLapse ile bebeğinizin ilk yılını muhteşem time-lapse videolarında yaşatın.',
+    badge: 'iPhone\'da Mevcut',
+    title: 'Bebeğinizin Büyümesini',
+    titleHighlight: 'Her Gün Kaydedin',
+    subtitle: 'Bebeğinizin değerli büyüme yolculuğunun tek bir anını bile kaçırmayın. Günlük fotoğraf hatırlatmaları her dönüm noktasını yakalamanıza yardımcı olur, ardından hepsini güzel bir time-lapse videosunda izleyin.',
     cta: 'App Store\'dan İndirin',
+    statsItems: [
+      { text: 'Günlük Fotoğraf Hatırlatmaları' },
+      { text: 'Time-lapse Videoları' },
+      { text: 'Bebek Büyüme Takipçisi' },
+      { text: 'Anılar Sonsuza Dek' },
+    ],
     stats: {
       parents: 'Mutlu Ebeveyn',
       photos: 'Kaydedilen Fotoğraf',
@@ -125,27 +133,58 @@ export const tr: Translation = {
   },
 
   howItWorks: {
-    title: 'Nasıl',
-    titleHighlight: 'Çalışır',
+    title: 'Nasıl Çalışır',
+    subtitle: 'Bebeğinizin büyüme time-lapse\'ini oluşturmak çok basit',
+    titleHighlight: '',
     steps: [
       {
-        title: 'Fotoğraf Çek',
-        description: 'Her gün aynı pozisyonda bebeğinizin fotoğrafını çekin',
+        title: 'İndir ve Albüm Oluştur',
+        description: 'TinyLapse\'i App Store\'dan indirin ve bebeğinizin adı ve doğum tarihiyle ilk albümünüzü oluşturun.',
       },
       {
-        title: 'Video Oluştur',
-        description: 'Bir dokunuşla tüm fotoğraflardan time-lapse video yapın',
+        title: 'Günlük Hatırlatıcılar Ayarla',
+        description: 'Her gün (veya birkaç günde bir) fotoğraf çekmek için ne zaman hatırlatılmak istediğinizi seçin.',
       },
       {
-        title: 'Paylaş',
-        description: 'Aileniz ve arkadaşlarınızla bu özel anları paylaşın',
+        title: 'Günlük Fotoğraf Çek',
+        description: 'Hatırlatıldığında uygulamayı açın ve hızlıca bir fotoğraf çekin. En iyi sonuçlar için tutarlı olun.',
+      },
+      {
+        title: 'Sihri İzleyin',
+        description: 'İstediğiniz zaman time-lapse videonuzu oluşturun ve aylarca süren büyümeyi saniyeler içinde izleyin!',
       },
     ],
   },
 
   useCases: {
-    title: 'Kimler İçin',
-    titleHighlight: 'Özel',
+    title: 'Her Büyüme Yolculuğu İçin',
+    titleHighlight: 'Mükemmel',
+    items: [
+      {
+        title: 'Bebeğin İlk Yılı',
+        description: 'Yeni doğandan ilk doğum gününe kadar her günü belgeleyin',
+      },
+      {
+        title: 'Hamilelik Yolculuğu',
+        description: 'Güzel bebek karnınızın dönüşümünü yakalayın',
+      },
+      {
+        title: 'Küçük Çocuk Büyümesi',
+        description: 'Küçüğünüzün büyümesini izleyin',
+      },
+      {
+        title: 'Birden Fazla Çocuk',
+        description: 'Her çocuğunuz için ayrı albümler oluşturun',
+      },
+      {
+        title: 'Aile Projeleri',
+        description: 'Herhangi bir büyüme veya değişim takibi projesi için kullanın',
+      },
+      {
+        title: 'Uzun Vadeli Anılar',
+        description: 'Yıllarca süren fotoğraflar tek bir güzel videoda',
+      },
+    ],
   },
 
   testimonials: {
@@ -213,21 +252,69 @@ export const tr: Translation = {
   },
 
   cta: {
-    title: 'Bebeğinizin Büyümesini Kaydetmeye Başlayın',
-    subtitle: 'Her gün binlerce ebeveyn TinyLapse ile bebeklerinin değerli anlarını yakalıyor',
+    title: 'Anıları Kaydetmeye Bugün Başlayın',
+    subtitle: 'TinyLapse\'i indirin ve bebeğinizin değerli büyüme yolculuğunun tek bir anını bile kaçırmayın.',
     button: 'Ücretsiz Deneyin',
+    availableText: 'iOS 18.0 veya üzeri için mevcut',
   },
 
   footer: {
-    description: 'Bebeğinizin büyümesini muhteşem time-lapse videolarında yaşatın',
+    description: 'Değerli anları, her gün birer birer yakalama.',
+    product: 'Ürün',
     quickLinks: 'Hızlı Bağlantılar',
     legal: 'Yasal',
     followUs: 'Bizi Takip Edin',
     copyright: '© 2024 TinyLapse. Tüm hakları saklıdır.',
+    productLinks: [
+      { name: 'Özellikler' },
+      { name: 'Nasıl Çalışır' },
+      { name: 'İndir' },
+    ],
+    legalLinks: [
+      { name: 'Gizlilik Politikası' },
+      { name: 'Şartlar ve Koşullar' },
+      { name: 'İletişim' },
+    ],
+  },
+
+  videoShowcase: {
+    title: 'Bebeğinizin',
+    titleHighlight: 'Büyüme Yolculuğunu İzleyin',
+    subtitle: 'TinyLapse\'in günlük fotoğrafları sihirli time-lapse videolarına nasıl dönüştürdüğünü görün. Her gülümseme, her dönüm noktası, saniyeler içinde güzelce yakalanıyor.',
+    stats: [
+      { value: '365+', label: 'Günlük Büyüme' },
+      { value: '2 Dokunuş', label: 'Video Oluşturmak İçin' },
+      { value: 'HD', label: 'Kalite Çıktı' },
+    ],
+  },
+
+  appScreenshots: {
+    title: 'Güçlü Özellikler,',
+    titleHighlight: 'Güzel Tasarım',
+    subtitle: 'Basitlik ve işlevselliğin mükemmel karışımını deneyimleyin',
+    screenshots: [
+      {
+        title: 'Albümler',
+        description: 'Bebeğinizin anlarını güzel albümlerde düzenleyin',
+      },
+      {
+        title: 'Videolar',
+        description: 'Tüm time-lapse kreasyonlarınıza göz atın ve yönetin',
+      },
+      {
+        title: 'Video Editör',
+        description: 'Güçlü düzenleme araçlarıyla çarpıcı time-lapse\'ler oluşturun',
+      },
+      {
+        title: 'Hesap',
+        description: 'Profilinizi ve uygulama ayarlarınızı sorunsuzca yönetin',
+      },
+    ],
   },
 
   faq: {
     title: 'Sık Sorulan Sorular',
+    subtitle: 'TinyLapse hakkında sık sorulan soruların yanıtlarını bulun',
     items: [
       {
         question: 'Fotoğraflarım güvende mi?',
@@ -254,5 +341,167 @@ export const tr: Translation = {
         answer: 'Abonelik başlattığınızda ilk 3 gün tamamen ücretsizdir. Bu süre zarfında tüm özelliklere erişebilirsiniz. İstediğiniz zaman Apple hesabınızdan iptal edebilirsiniz.',
       },
     ],
+  },
+
+  contact: {
+    title: 'İletişime Geçin',
+    subtitle: 'Sorularınız mı var? Size yardımcı olmak isteriz.',
+  },
+
+  privacy: {
+    title: 'Gizlilik Politikası',
+    lastUpdated: 'Son güncelleme',
+    intro: 'TinyLapse\'de gizliliğinizi ciddiye alıyoruz. Bu Gizlilik Politikası, mobil uygulamamızı kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.',
+    sections: [
+      {
+        title: '1. Topladığımız Bilgiler',
+        content: 'TinyLapse gizlilik düşünülerek tasarlanmıştır. Size en iyi deneyimi sunmak için minimum bilgi topluyoruz:',
+        items: [
+          {
+            label: 'Fotoğraflar:',
+            text: 'Çektiğiniz tüm fotoğraflar cihazınızda yerel olarak saklanır ve kişisel iCloud hesabınızla senkronize edilir. Fotoğraflarınıza hiçbir zaman erişimimiz yoktur.',
+          },
+          {
+            label: 'Albüm Verileri:',
+            text: 'Albüm adları, tarihler ve ayarlar cihazınızda ve iCloud\'da saklanır.',
+          },
+          {
+            label: 'Kullanım Verileri:',
+            text: 'Uygulamayı geliştirmek için özellik kullanımı ve çökme raporları gibi anonim kullanım istatistikleri toplayabiliriz.',
+          },
+        ],
+      },
+      {
+        title: '2. Bilgilerinizi Nasıl Kullanırız',
+        content: 'Topladığımız bilgileri şunlar için kullanırız:',
+        items: [
+          { label: '', text: 'TinyLapse hizmetini sağlamak ve sürdürmek' },
+          { label: '', text: 'Fotoğraflarınızdan time-lapse videoları oluşturmak' },
+          { label: '', text: 'Hatırlatma bildirimleri göndermek (etkinleştirilmişse)' },
+          { label: '', text: 'Uygulama performansını iyileştirmek ve hataları düzeltmek' },
+          { label: '', text: 'Kullanım kalıplarına dayalı yeni özellikler geliştirmek' },
+        ],
+      },
+      {
+        title: '3. Veri Depolama ve Güvenlik',
+        content: 'Fotoğraflarınız ve verileriniz güvenli bir şekilde saklanır:',
+        items: [
+          { label: '', text: 'Tüm fotoğraflar cihazınızda saklanır ve kişisel iCloud hesabınızla senkronize edilir' },
+          { label: '', text: 'Veri aktarımı için endüstri standardı şifreleme kullanıyoruz' },
+          { label: '', text: 'Fotoğraflarınızı sunucularımızda asla saklamıyoruz' },
+          { label: '', text: 'iCloud verileriniz Apple\'ın güvenlik önlemleri ve Apple ID\'nizle korunur' },
+        ],
+      },
+      {
+        title: '4. Haklarınız',
+        content: 'Verilerinizle ilgili aşağıdaki haklara sahipsiniz:',
+        items: [
+          { label: '', text: 'Fotoğraflarınıza her zaman erişin ve dışa aktarın' },
+          { label: '', text: 'Albümlerinizi ve fotoğraflarınızı kalıcı olarak silin' },
+          { label: '', text: 'iCloud senkronizasyonunu devre dışı bırakın' },
+          { label: '', text: 'Bildirimleri ve hatırlatıcıları kapatın' },
+          { label: '', text: 'Topladığımız verilerin silinmesini talep edin' },
+        ],
+      },
+      {
+        title: '5. Üçüncü Taraf Hizmetleri',
+        content: 'TinyLapse aşağıdaki üçüncü taraf hizmetlerini kullanır:',
+        items: [
+          {
+            label: 'iCloud:',
+            text: 'Fotoğraf yedekleme ve senkronizasyon için (Apple\'ın Gizlilik Politikasına tabidir)',
+          },
+          {
+            label: 'Apple Analytics:',
+            text: 'Anonim çökme raporları ve kullanım istatistikleri için',
+          },
+        ],
+      },
+      {
+        title: '6. Çocukların Gizliliği',
+        content: 'TinyLapse çocukların fotoğraflarını çekmek için kullanılsa da, uygulama ebeveynler ve veliler tarafından kullanılmak üzere tasarlanmıştır. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz.',
+      },
+      {
+        title: '7. Bu Politikadaki Değişiklikler',
+        content: 'Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Yeni Gizlilik Politikasını uygulamaya göndererek ve "Son güncelleme" tarihini güncelleyerek sizi herhangi bir değişiklikten haberdar edeceğiz.',
+      },
+      {
+        title: '8. Bize Ulaşın',
+        content: 'Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bize ulaşın:',
+      },
+    ],
+    contactEmail: 'support@tinylapse.app',
+  },
+
+  terms: {
+    title: 'Şartlar ve Koşullar',
+    lastUpdated: 'Son güncelleme',
+    intro: 'Lütfen TinyLapse\'i kullanmadan önce bu Şartlar ve Koşulları dikkatlice okuyun. Uygulamaya erişerek veya kullanarak, bu şartlara bağlı kalmayı kabul etmiş olursunuz.',
+    sections: [
+      {
+        title: '1. Şartların Kabulü',
+        content: 'TinyLapse\'i indirerek, yükleyerek veya kullanarak, bu Şartlar ve Koşulları kabul etmiş olursunuz. Bu şartların herhangi bir bölümünü kabul etmiyorsanız, uygulamayı kullanamazsınız.',
+      },
+      {
+        title: '2. Kullanım Lisansı',
+        content: 'TinyLapse, bu Şartlar ve Koşullara tabi olarak iOS cihazınızda uygulamayı kullanmanız için size kişisel, münhasır olmayan, devredilemez bir lisans verir.',
+        items: [
+          'Uygulamayı değiştiremez veya kopyalayamazsınız',
+          'Tersine mühendislik yapamaz veya kaynak kodu çıkarmaya çalışamazsınız',
+          'Herhangi bir telif hakkı veya mülkiyet bildirimini kaldıramazsınız',
+          'Uygulamayı izinsiz başka bir kişiye veya cihaza aktaramazsınız',
+          'Uygulamayı izinsiz ticari amaçlar için kullanamazsınız',
+        ],
+      },
+      {
+        title: '3. Kullanıcı Hesapları',
+        content: 'TinyLapse, veri senkronizasyonu için Apple ID ve iCloud hesabınızı kullanır. Şunlardan sorumlusunuz:',
+        items: [
+          'Apple ID\'nizin güvenliğini korumak',
+          'Hesabınız altında gerçekleşen tüm faaliyetler',
+          'Yeterli iCloud depolama alanına sahip olduğunuzdan emin olmak',
+        ],
+      },
+      {
+        title: '4. İçerik Sahipliği',
+        content: 'TinyLapse kullanarak oluşturduğunuz fotoğraflar ve videolar üzerindeki tüm hakları saklı tutarsınız. İçeriğiniz üzerinde herhangi bir mülkiyet iddia etmiyoruz. Ancak, fotoğraflarınızda görünen herhangi bir kişiyi fotoğraflama hakkına sahip olduğunuzdan emin olmaktan siz sorumlusunuz.',
+      },
+      {
+        title: '5. Abonelikler ve Ödemeler',
+        content: 'TinyLapse hem ücretsiz hem de premium özellikler sunar:',
+        items: [
+          'Abonelikler Apple App Store üzerinden yönetilir ve Apple\'ın şartlarına tabidir',
+          'Satın alma onayında Apple ID hesabınızdan ücretlendirilirsiniz',
+          'Otomatik yenileme, mevcut dönemin bitiminden en az 24 saat önce kapatılmadıkça abonelikler otomatik olarak yenilenir',
+          'İadeler Apple\'ın iade politikasına göre işlenir',
+        ],
+      },
+      {
+        title: '6. Sınırlamalar',
+        content: 'TinyLapse herhangi bir garanti olmaksızın "olduğu gibi" sağlanmaktadır. Şunları garanti etmiyoruz:',
+        items: [
+          'Uygulamanın hatasız veya kesintisiz olacağı',
+          'Tüm özelliklerin tüm cihazlarda çalışacağı',
+          'Verilerinizin asla kaybolmayacağı (lütfen önemli fotoğrafları yedekleyin)',
+        ],
+      },
+      {
+        title: '7. Şartlardaki Değişiklikler',
+        content: 'Bu Şartlar ve Koşulları istediğimiz zaman değiştirme hakkını saklı tutarız. Kullanıcıları uygulama üzerinden veya e-posta yoluyla herhangi bir önemli değişiklikten haberdar edeceğiz. Değişikliklerden sonra uygulamanın devam eden kullanımı, yeni şartların kabulü anlamına gelir.',
+      },
+      {
+        title: '8. Fesih',
+        content: 'Bu Şartlar ve Koşulları ihlal ederseniz, önceden haber vermeksizin TinyLapse\'e erişiminizi derhal feshedebilir veya askıya alabiliriz. Fesih üzerine, uygulamanın tüm kullanımını durdurmalısınız.',
+      },
+      {
+        title: '9. Geçerli Hukuk',
+        content: 'Bu Şartlar ve Koşullar, ilgili yasalara uygun olarak yönetilir ve yorumlanır. Herhangi bir anlaşmazlık uygun yargı alanında çözülecektir.',
+      },
+      {
+        title: '10. İletişim Bilgileri',
+        content: 'Bu Şartlar ve Koşullar hakkında sorularınız varsa, lütfen bize ulaşın:',
+      },
+    ],
+    contactEmail: 'support@tinylapse.app',
   },
 }

@@ -11,9 +11,14 @@ export interface Translation {
 
   // Hero
   hero: {
+    badge: string
     title: string
+    titleHighlight: string
     subtitle: string
     cta: string
+    statsItems: Array<{
+      text: string
+    }>
     stats: {
       parents: string
       photos: string
@@ -55,6 +60,7 @@ export interface Translation {
   // How It Works
   howItWorks: {
     title: string
+    subtitle: string
     titleHighlight: string
     steps: Array<{
       title: string
@@ -66,6 +72,32 @@ export interface Translation {
   useCases: {
     title: string
     titleHighlight: string
+    items: Array<{
+      title: string
+      description: string
+    }>
+  }
+
+  // Video Showcase
+  videoShowcase: {
+    title: string
+    titleHighlight: string
+    subtitle: string
+    stats: Array<{
+      value: string
+      label: string
+    }>
+  }
+
+  // App Screenshots
+  appScreenshots: {
+    title: string
+    titleHighlight: string
+    subtitle: string
+    screenshots: Array<{
+      title: string
+      description: string
+    }>
   }
 
   // Testimonials
@@ -111,23 +143,67 @@ export interface Translation {
     title: string
     subtitle: string
     button: string
+    availableText: string
   }
 
   // Footer
   footer: {
     description: string
+    product: string
     quickLinks: string
     legal: string
     followUs: string
     copyright: string
+    productLinks: Array<{
+      name: string
+    }>
+    legalLinks: Array<{
+      name: string
+    }>
   }
 
   // FAQ
   faq: {
     title: string
+    subtitle: string
     items: Array<{
       question: string
       answer: string
     }>
+  }
+
+  // Contact Page
+  contact: {
+    title: string
+    subtitle: string
+  }
+
+  // Privacy Page
+  privacy: {
+    title: string
+    lastUpdated: string
+    intro: string
+    sections: Array<{
+      title: string
+      content: string
+      items?: Array<{
+        label: string
+        text: string
+      }>
+    }>
+    contactEmail: string
+  }
+
+  // Terms Page
+  terms: {
+    title: string
+    lastUpdated: string
+    intro: string
+    sections: Array<{
+      title: string
+      content: string
+      items?: string[]
+    }>
+    contactEmail: string
   }
 }

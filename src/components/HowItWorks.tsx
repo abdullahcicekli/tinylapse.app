@@ -1,39 +1,26 @@
 import { Download, Bell, Camera, Sparkles } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      icon: Download,
-      title: 'Download & Create Album',
-      description:
-        'Get TinyLapse from the App Store and create your first album with your baby\'s name and birthdate.',
-    },
-    {
-      icon: Bell,
-      title: 'Set Daily Reminders',
-      description:
-        'Choose when you want to be reminded each day (or every few days) to take a photo.',
-    },
-    {
-      icon: Camera,
-      title: 'Take Daily Photos',
-      description:
-        'Open the app when reminded and snap a quick photo. Keep it consistent for best results.',
-    },
-    {
-      icon: Sparkles,
-      title: 'Watch the Magic',
-      description:
-        'Generate your timelapse video anytime and watch months of growth in seconds!',
-    },
-  ]
+  const { t } = useLanguage()
+
+  const icons = [Download, Bell, Camera, Sparkles]
+
+  const steps = t.howItWorks.steps.map((step, index) => ({
+    icon: icons[index],
+    title: step.title,
+    description: step.description,
+  }))
 
   return (
     <section id="how-it-works" className="section-container bg-gray-900/20">
       <div className="text-center space-y-4 mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">How It Works</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          {t.howItWorks.title}{' '}
+          <span className="gradient-text">{t.howItWorks.titleHighlight}</span>
+        </h2>
         <p className="text-lg text-gray-400">
-          Creating your baby's growth timelapse is simple
+          {t.howItWorks.subtitle}
         </p>
       </div>
 

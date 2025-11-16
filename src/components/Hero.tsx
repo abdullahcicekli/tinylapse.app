@@ -1,8 +1,10 @@
 import { Smartphone, Camera, Video, Baby, Heart } from 'lucide-react'
 import Lottie from 'lottie-react'
 import { useState, useEffect } from 'react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Hero() {
+  const { t } = useLanguage()
   const [animationData, setAnimationData] = useState(null)
 
   useEffect(() => {
@@ -12,12 +14,11 @@ export default function Hero() {
       .catch(err => console.error('Failed to load animation:', err))
   }, [])
 
-  const stats = [
-    { icon: Camera, text: 'Daily Photo Reminders' },
-    { icon: Video, text: 'Timelapse Videos' },
-    { icon: Baby, text: 'Baby Growth Tracker' },
-    { icon: Heart, text: 'Memories Forever' },
-  ]
+  const statsIcons = [Camera, Video, Baby, Heart]
+  const stats = t.hero.statsItems.map((item, index) => ({
+    icon: statsIcons[index],
+    text: item.text,
+  }))
 
   const lottieOptions = {
     animationData,
@@ -38,20 +39,18 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-gray-900 border border-gray-800 rounded-full px-4 py-2">
               <Smartphone size={16} className="text-brand-green" />
-              <span className="text-sm text-gray-300">Available on iPhone</span>
+              <span className="text-sm text-gray-300">{t.hero.badge}</span>
             </div>
 
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Capture Your Baby's Growth{' '}
-              <span className="gradient-text">Every Single Day</span>
+              {t.hero.title}{' '}
+              <span className="gradient-text">{t.hero.titleHighlight}</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-lg text-gray-300 max-w-2xl">
-              Never miss a moment of your baby's precious growth journey. Daily photo
-              reminders help you capture every milestone, then watch it all unfold in a
-              beautiful timelapse video.
+              {t.hero.subtitle}
             </p>
 
             {/* CTA Buttons */}

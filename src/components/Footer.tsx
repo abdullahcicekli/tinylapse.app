@@ -1,19 +1,21 @@
 import { Link } from 'react-router-dom'
 import { Instagram, Twitter, Facebook } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Footer() {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   const productLinks = [
-    { name: 'Features', path: '/#features' },
-    { name: 'How It Works', path: '/#how-it-works' },
-    { name: 'Download', path: 'https://apps.apple.com/app/tinylapse', external: true },
+    { name: t.footer.productLinks[0].name, path: '/#features' },
+    { name: t.footer.productLinks[1].name, path: '/#how-it-works' },
+    { name: t.footer.productLinks[2].name, path: 'https://apps.apple.com/app/tinylapse', external: true },
   ]
 
   const legalLinks = [
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms & Conditions', path: '/terms' },
-    { name: 'Contact', path: '/contact' },
+    { name: t.footer.legalLinks[0].name, path: '/privacy' },
+    { name: t.footer.legalLinks[1].name, path: '/terms' },
+    { name: t.footer.legalLinks[2].name, path: '/contact' },
   ]
 
   const socialLinks = [
@@ -37,13 +39,13 @@ export default function Footer() {
               <span className="text-white font-semibold text-lg">TinyLapse</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Capturing precious moments, one day at a time.
+              {t.footer.description}
             </p>
           </div>
 
           {/* Product Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Product</h3>
+            <h3 className="text-white font-semibold mb-4">{t.footer.product}</h3>
             <ul className="space-y-2">
               {productLinks.map((link) =>
                 link.external ? (
@@ -73,7 +75,7 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <h3 className="text-white font-semibold mb-4">{t.footer.legal}</h3>
             <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.name}>
@@ -90,7 +92,7 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Follow Us</h3>
+            <h3 className="text-white font-semibold mb-4">{t.footer.followUs}</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon
@@ -114,7 +116,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <p className="text-center text-gray-400 text-sm">
-            © {currentYear} TinyLapse. All rights reserved.
+            {t.footer.copyright.replace('2024', currentYear.toString())}
           </p>
         </div>
       </div>

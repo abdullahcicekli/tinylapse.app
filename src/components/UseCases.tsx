@@ -1,44 +1,23 @@
 import { Baby, Heart, Smile, Users, Home, Calendar } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function UseCases() {
-  const useCases = [
-    {
-      icon: Baby,
-      title: "Baby's First Year",
-      description: 'Document every day from newborn to their first birthday',
-    },
-    {
-      icon: Heart,
-      title: 'Pregnancy Journey',
-      description: 'Capture your beautiful baby bump transformation',
-    },
-    {
-      icon: Smile,
-      title: 'Toddler Growth',
-      description: 'Watch your little one grow through the toddler years',
-    },
-    {
-      icon: Users,
-      title: 'Multiple Children',
-      description: 'Create separate albums for each of your kids',
-    },
-    {
-      icon: Home,
-      title: 'Family Projects',
-      description: 'Use for any growth or change tracking project',
-    },
-    {
-      icon: Calendar,
-      title: 'Long-Term Memories',
-      description: 'Years of photos turned into one beautiful video',
-    },
-  ]
+  const { t } = useLanguage()
+
+  const icons = [Baby, Heart, Smile, Users, Home, Calendar]
+
+  const useCases = t.useCases.items.map((item, index) => ({
+    icon: icons[index],
+    title: item.title,
+    description: item.description,
+  }))
 
   return (
     <section className="section-container">
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Perfect For Every Growth Journey
+          {t.useCases.title}{' '}
+          <span className="gradient-text">{t.useCases.titleHighlight}</span>
         </h2>
       </div>
 

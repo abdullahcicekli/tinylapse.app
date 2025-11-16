@@ -1,7 +1,10 @@
 import Lottie from 'lottie-react'
 import onboarding4Animation from '../assets/onboarding4.json'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function VideoShowcase() {
+  const { t } = useLanguage()
+
   const lottieOptions = {
     animationData: onboarding4Animation,
     loop: true,
@@ -16,12 +19,11 @@ export default function VideoShowcase() {
     <section className="section-container bg-gradient-to-b from-gray-900/20 to-transparent">
       <div className="text-center space-y-6 mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Watch Your Baby's{' '}
-          <span className="gradient-text">Growth Journey</span>
+          {t.videoShowcase.title}{' '}
+          <span className="gradient-text">{t.videoShowcase.titleHighlight}</span>
         </h2>
         <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-          See how TinyLapse transforms daily photos into magical timelapse videos.
-          Every smile, every milestone, beautifully captured in seconds.
+          {t.videoShowcase.subtitle}
         </p>
       </div>
 
@@ -46,18 +48,12 @@ export default function VideoShowcase() {
 
       {/* Stats or Features */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 max-w-4xl mx-auto">
-        <div className="text-center space-y-2 p-6 bg-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-brand-green/30 transition-colors duration-300">
-          <div className="text-3xl sm:text-4xl font-bold gradient-text">365+</div>
-          <p className="text-sm sm:text-base text-gray-400">Days of Growth</p>
-        </div>
-        <div className="text-center space-y-2 p-6 bg-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-accent/30 transition-colors duration-300">
-          <div className="text-3xl sm:text-4xl font-bold gradient-text">2 Taps</div>
-          <p className="text-sm sm:text-base text-gray-400">To Create Video</p>
-        </div>
-        <div className="text-center space-y-2 p-6 bg-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-brand-green/30 transition-colors duration-300">
-          <div className="text-3xl sm:text-4xl font-bold gradient-text">HD</div>
-          <p className="text-sm sm:text-base text-gray-400">Quality Export</p>
-        </div>
+        {t.videoShowcase.stats.map((stat, index) => (
+          <div key={index} className="text-center space-y-2 p-6 bg-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-brand-green/30 transition-colors duration-300">
+            <div className="text-3xl sm:text-4xl font-bold gradient-text">{stat.value}</div>
+            <p className="text-sm sm:text-base text-gray-400">{stat.label}</p>
+          </div>
+        ))}
       </div>
     </section>
   )

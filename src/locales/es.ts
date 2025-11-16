@@ -9,9 +9,17 @@ export const es: Translation = {
   },
 
   hero: {
+    badge: 'Disponible en iPhone',
     title: 'Captura el Crecimiento de tu Bebé',
-    subtitle: 'Toma fotos diarias, míralos crecer. Crea increíbles videos time-lapse del primer año de tu bebé con TinyLapse.',
+    titleHighlight: 'Cada Día',
+    subtitle: 'No te pierdas ni un momento del precioso viaje de crecimiento de tu bebé. Los recordatorios diarios de fotos te ayudan a capturar cada hito, y luego observa cómo todo se desarrolla en un hermoso video time-lapse.',
     cta: 'Descargar en App Store',
+    statsItems: [
+      { text: 'Recordatorios Diarios de Fotos' },
+      { text: 'Videos Time-Lapse' },
+      { text: 'Seguimiento del Crecimiento del Bebé' },
+      { text: 'Recuerdos para Siempre' },
+    ],
     stats: {
       parents: 'Padres Felices',
       photos: 'Fotos Capturadas',
@@ -127,25 +135,56 @@ export const es: Translation = {
   howItWorks: {
     title: 'Cómo',
     titleHighlight: 'Funciona',
+    subtitle: 'Crear el time-lapse del crecimiento de tu bebé es simple',
     steps: [
       {
-        title: 'Toma Fotos',
-        description: 'Toma fotos de tu bebé en la misma posición todos los días',
+        title: 'Descargar y Crear Álbum',
+        description: 'Obtén TinyLapse de la App Store y crea tu primer álbum con el nombre y fecha de nacimiento de tu bebé.',
       },
       {
-        title: 'Crea Video',
-        description: 'Crea un video time-lapse de todas las fotos con un toque',
+        title: 'Configurar Recordatorios Diarios',
+        description: 'Elige cuándo quieres que te recuerden cada día (o cada pocos días) para tomar una foto.',
       },
       {
-        title: 'Comparte',
-        description: 'Comparte estos momentos especiales con familia y amigos',
+        title: 'Tomar Fotos Diarias',
+        description: 'Abre la aplicación cuando te lo recuerden y toma una foto rápida. Mantén la consistencia para obtener mejores resultados.',
+      },
+      {
+        title: 'Ver la Magia',
+        description: '¡Genera tu video time-lapse en cualquier momento y observa meses de crecimiento en segundos!',
       },
     ],
   },
 
   useCases: {
-    title: 'Perfecto Para',
-    titleHighlight: 'Todos',
+    title: 'Perfecto para Cada',
+    titleHighlight: 'Viaje de Crecimiento',
+    items: [
+      {
+        title: 'Primer Año del Bebé',
+        description: 'Documenta cada día desde recién nacido hasta su primer cumpleaños',
+      },
+      {
+        title: 'Viaje del Embarazo',
+        description: 'Captura la hermosa transformación de tu barriga',
+      },
+      {
+        title: 'Crecimiento del Niño Pequeño',
+        description: 'Observa cómo tu pequeño crece durante los años de la primera infancia',
+      },
+      {
+        title: 'Múltiples Hijos',
+        description: 'Crea álbumes separados para cada uno de tus hijos',
+      },
+      {
+        title: 'Proyectos Familiares',
+        description: 'Úsalo para cualquier proyecto de seguimiento de crecimiento o cambio',
+      },
+      {
+        title: 'Recuerdos a Largo Plazo',
+        description: 'Años de fotos convertidos en un hermoso video',
+      },
+    ],
   },
 
   testimonials: {
@@ -213,21 +252,69 @@ export const es: Translation = {
   },
 
   cta: {
-    title: 'Comienza a Capturar el Crecimiento de tu Bebé',
-    subtitle: 'Miles de padres capturan los momentos preciosos de sus bebés con TinyLapse todos los días',
+    title: 'Comienza a Capturar Recuerdos Hoy',
+    subtitle: 'Descarga TinyLapse y no te pierdas ni un momento del precioso viaje de crecimiento de tu bebé.',
     button: 'Prueba Gratis',
+    availableText: 'Disponible en iOS 18.0 o posterior',
   },
 
   footer: {
-    description: 'Revive el crecimiento de tu bebé en impresionantes videos time-lapse',
+    description: 'Capturando momentos preciosos, un día a la vez.',
+    product: 'Producto',
     quickLinks: 'Enlaces Rápidos',
     legal: 'Legal',
     followUs: 'Síguenos',
     copyright: '© 2024 TinyLapse. Todos los derechos reservados.',
+    productLinks: [
+      { name: 'Características' },
+      { name: 'Cómo Funciona' },
+      { name: 'Descargar' },
+    ],
+    legalLinks: [
+      { name: 'Política de Privacidad' },
+      { name: 'Términos y Condiciones' },
+      { name: 'Contacto' },
+    ],
+  },
+
+  videoShowcase: {
+    title: 'Observa el',
+    titleHighlight: 'Viaje de Crecimiento de tu Bebé',
+    subtitle: 'Mira cómo TinyLapse transforma las fotos diarias en videos time-lapse mágicos. Cada sonrisa, cada hito, bellamente capturados en segundos.',
+    stats: [
+      { value: '365+', label: 'Días de Crecimiento' },
+      { value: '2 Toques', label: 'Para Crear Video' },
+      { value: 'HD', label: 'Exportación de Calidad' },
+    ],
+  },
+
+  appScreenshots: {
+    title: 'Características Potentes,',
+    titleHighlight: 'Diseño Hermoso',
+    subtitle: 'Experimenta la mezcla perfecta de simplicidad y funcionalidad',
+    screenshots: [
+      {
+        title: 'Álbumes',
+        description: 'Organiza los momentos de tu bebé en hermosos álbumes',
+      },
+      {
+        title: 'Videos',
+        description: 'Navega y gestiona todas tus creaciones time-lapse',
+      },
+      {
+        title: 'Editor de Video',
+        description: 'Crea time-lapses impresionantes con potentes herramientas de edición',
+      },
+      {
+        title: 'Cuenta',
+        description: 'Gestiona tu perfil y configuración de la aplicación sin problemas',
+      },
+    ],
   },
 
   faq: {
     title: 'Preguntas Frecuentes',
+    subtitle: 'Encuentra respuestas a preguntas comunes sobre TinyLapse',
     items: [
       {
         question: '¿Están seguras mis fotos?',
@@ -254,5 +341,167 @@ export const es: Translation = {
         answer: 'Cuando inicias tu suscripción, los primeros 3 días son completamente gratis. Puedes acceder a todas las funciones durante este tiempo. Puedes cancelar desde tu cuenta de Apple en cualquier momento.',
       },
     ],
+  },
+
+  contact: {
+    title: 'Ponte en Contacto',
+    subtitle: '¿Tienes preguntas? Nos encantaría saber de ti.',
+  },
+
+  privacy: {
+    title: 'Política de Privacidad',
+    lastUpdated: 'Última actualización',
+    intro: 'En TinyLapse, nos tomamos en serio tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu información cuando usas nuestra aplicación móvil.',
+    sections: [
+      {
+        title: '1. Información que Recopilamos',
+        content: 'TinyLapse está diseñado pensando en la privacidad. Recopilamos información mínima para brindarte la mejor experiencia:',
+        items: [
+          {
+            label: 'Fotos:',
+            text: 'Todas las fotos que captures se almacenan localmente en tu dispositivo y se sincronizan con tu cuenta personal de iCloud. Nunca tenemos acceso a tus fotos.',
+          },
+          {
+            label: 'Datos del Álbum:',
+            text: 'Los nombres de los álbumes, fechas y configuraciones se almacenan en tu dispositivo y en iCloud.',
+          },
+          {
+            label: 'Datos de Uso:',
+            text: 'Podemos recopilar estadísticas de uso anónimas para mejorar la aplicación, como el uso de funciones y reportes de fallos.',
+          },
+        ],
+      },
+      {
+        title: '2. Cómo Usamos tu Información',
+        content: 'Usamos la información que recopilamos para:',
+        items: [
+          { label: '', text: 'Proporcionar y mantener el servicio TinyLapse' },
+          { label: '', text: 'Generar videos time-lapse de tus fotos' },
+          { label: '', text: 'Enviarte notificaciones recordatorias (si están habilitadas)' },
+          { label: '', text: 'Mejorar el rendimiento de la aplicación y corregir errores' },
+          { label: '', text: 'Desarrollar nuevas funciones basadas en patrones de uso' },
+        ],
+      },
+      {
+        title: '3. Almacenamiento y Seguridad de Datos',
+        content: 'Tus fotos y datos se almacenan de forma segura:',
+        items: [
+          { label: '', text: 'Todas las fotos se almacenan en tu dispositivo y se sincronizan con tu cuenta personal de iCloud' },
+          { label: '', text: 'Utilizamos cifrado estándar de la industria para la transmisión de datos' },
+          { label: '', text: 'Nunca almacenamos tus fotos en nuestros servidores' },
+          { label: '', text: 'Tus datos de iCloud están protegidos por las medidas de seguridad de Apple y tu Apple ID' },
+        ],
+      },
+      {
+        title: '4. Tus Derechos',
+        content: 'Tienes los siguientes derechos con respecto a tus datos:',
+        items: [
+          { label: '', text: 'Acceder y exportar tus fotos en cualquier momento' },
+          { label: '', text: 'Eliminar tus álbumes y fotos permanentemente' },
+          { label: '', text: 'Desactivar la sincronización de iCloud' },
+          { label: '', text: 'Desactivar notificaciones y recordatorios' },
+          { label: '', text: 'Solicitar la eliminación de cualquier dato que podamos haber recopilado' },
+        ],
+      },
+      {
+        title: '5. Servicios de Terceros',
+        content: 'TinyLapse utiliza los siguientes servicios de terceros:',
+        items: [
+          {
+            label: 'iCloud:',
+            text: 'Para respaldo y sincronización de fotos (sujeto a la Política de Privacidad de Apple)',
+          },
+          {
+            label: 'Apple Analytics:',
+            text: 'Para reportes de fallos anónimos y estadísticas de uso',
+          },
+        ],
+      },
+      {
+        title: '6. Privacidad de los Niños',
+        content: 'Aunque TinyLapse se utiliza para capturar fotos de niños, la aplicación está diseñada para ser utilizada por padres y tutores. No recopilamos intencionalmente información personal de niños menores de 13 años.',
+      },
+      {
+        title: '7. Cambios a esta Política',
+        content: 'Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos sobre cualquier cambio publicando la nueva Política de Privacidad en la aplicación y actualizando la fecha de "Última actualización".',
+      },
+      {
+        title: '8. Contáctanos',
+        content: 'Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos:',
+      },
+    ],
+    contactEmail: 'support@tinylapse.app',
+  },
+
+  terms: {
+    title: 'Términos y Condiciones',
+    lastUpdated: 'Última actualización',
+    intro: 'Por favor, lee estos Términos y Condiciones cuidadosamente antes de usar TinyLapse. Al acceder o usar la aplicación, aceptas estar sujeto a estos términos.',
+    sections: [
+      {
+        title: '1. Aceptación de los Términos',
+        content: 'Al descargar, instalar o usar TinyLapse, aceptas estos Términos y Condiciones. Si no estás de acuerdo con alguna parte de estos términos, no puedes usar la aplicación.',
+      },
+      {
+        title: '2. Licencia de Uso',
+        content: 'TinyLapse te otorga una licencia personal, no exclusiva e intransferible para usar la aplicación en tu dispositivo iOS, sujeto a estos Términos y Condiciones.',
+        items: [
+          'No modificar ni copiar la aplicación',
+          'No realizar ingeniería inversa ni intentar extraer el código fuente',
+          'No eliminar ningún aviso de derechos de autor o propiedad',
+          'No transferir la aplicación a otra persona o dispositivo sin autorización',
+          'No usar la aplicación para fines comerciales sin permiso',
+        ],
+      },
+      {
+        title: '3. Cuentas de Usuario',
+        content: 'TinyLapse utiliza tu Apple ID y cuenta de iCloud para la sincronización de datos. Eres responsable de:',
+        items: [
+          'Mantener la seguridad de tu Apple ID',
+          'Todas las actividades que ocurran bajo tu cuenta',
+          'Asegurarte de tener suficiente almacenamiento en iCloud',
+        ],
+      },
+      {
+        title: '4. Propiedad del Contenido',
+        content: 'Conservas todos los derechos sobre las fotos y videos que crees usando TinyLapse. No reclamamos ninguna propiedad sobre tu contenido. Sin embargo, eres responsable de asegurarte de tener el derecho de fotografiar a cualquier persona que aparezca en tus fotos.',
+      },
+      {
+        title: '5. Suscripciones y Pagos',
+        content: 'TinyLapse ofrece funciones gratuitas y premium:',
+        items: [
+          'Las suscripciones se gestionan a través de la App Store de Apple y están sujetas a los términos de Apple',
+          'Se te cobrará a través de tu cuenta de Apple ID al confirmar la compra',
+          'Las suscripciones se renuevan automáticamente a menos que la renovación automática se desactive al menos 24 horas antes del final del período actual',
+          'Los reembolsos se manejan según la política de reembolso de Apple',
+        ],
+      },
+      {
+        title: '6. Limitaciones',
+        content: 'TinyLapse se proporciona "tal cual" sin garantías de ningún tipo. No garantizamos que:',
+        items: [
+          'La aplicación estará libre de errores o ininterrumpida',
+          'Todas las funciones funcionarán en todos los dispositivos',
+          'Tus datos nunca se perderán (por favor, realiza copias de seguridad de fotos importantes)',
+        ],
+      },
+      {
+        title: '7. Cambios en los Términos',
+        content: 'Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Notificaremos a los usuarios de cualquier cambio material a través de la aplicación o por correo electrónico. El uso continuo de la aplicación después de los cambios constituye la aceptación de los nuevos términos.',
+      },
+      {
+        title: '8. Terminación',
+        content: 'Podemos terminar o suspender tu acceso a TinyLapse inmediatamente, sin previo aviso, si incumples estos Términos y Condiciones. Tras la terminación, debes cesar todo uso de la aplicación.',
+      },
+      {
+        title: '9. Ley Aplicable',
+        content: 'Estos Términos y Condiciones se rigen e interpretan de acuerdo con las leyes aplicables. Cualquier disputa se resolverá en la jurisdicción apropiada.',
+      },
+      {
+        title: '10. Información de Contacto',
+        content: 'Si tienes alguna pregunta sobre estos Términos y Condiciones, por favor contáctanos:',
+      },
+    ],
+    contactEmail: 'support@tinylapse.app',
   },
 }

@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useRef } from 'react'
+import { useLanguage } from '../hooks/useLanguage'
 
 interface Screenshot {
   image: string
@@ -8,32 +9,18 @@ interface Screenshot {
 }
 
 export default function AppScreenshots() {
+  const { t } = useLanguage()
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
 
-  const screenshots: Screenshot[] = [
-    {
-      image: '/albumspage.PNG',
-      title: 'Albums',
-      description: 'Organize your baby\'s moments into beautiful albums'
-    },
-    {
-      image: '/videopage.PNG',
-      title: 'Videos',
-      description: 'Browse and manage all your timelapse creations'
-    },
-    {
-      image: '/videoeditorpage.PNG',
-      title: 'Video Editor',
-      description: 'Create stunning timelapses with powerful editing tools'
-    },
-    {
-      image: '/accountpage.PNG',
-      title: 'Account',
-      description: 'Manage your profile and app settings seamlessly'
-    }
-  ]
+  const screenshotImages = ['/albumspage.PNG', '/videopage.PNG', '/videoeditorpage.PNG', '/accountpage.PNG']
+
+  const screenshots: Screenshot[] = t.appScreenshots.screenshots.map((screenshot, index) => ({
+    image: screenshotImages[index],
+    title: screenshot.title,
+    description: screenshot.description,
+  }))
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -56,11 +43,11 @@ export default function AppScreenshots() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Powerful Features,{' '}
-            <span className="gradient-text">Beautiful Design</span>
+            {t.appScreenshots.title}{' '}
+            <span className="gradient-text">{t.appScreenshots.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Experience the perfect blend of simplicity and functionality
+            {t.appScreenshots.subtitle}
           </p>
         </div>
 
