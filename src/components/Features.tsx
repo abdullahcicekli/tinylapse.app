@@ -1,70 +1,77 @@
 import {
   Bell,
-  Folder,
+  FolderOpen,
   Video,
-  Ghost,
-  Grid3x3,
-  Lock,
-  Camera,
-  Palette,
-  Cloud,
+  Sparkles,
+  Droplet,
+  Share2,
+  Zap,
+  Target,
+  Shield,
+  Gift,
 } from 'lucide-react'
 
 export default function Features() {
   const features = [
     {
-      icon: Bell,
-      title: 'Smart Daily Reminders',
+      icon: FolderOpen,
+      title: 'Sınırsız Albüm ve Fotoğraf',
       description:
-        'Set custom reminder intervals (1-30 days) for each album. Never forget to capture your baby\'s daily photo with intelligent notifications.',
-    },
-    {
-      icon: Folder,
-      title: 'Multiple Albums',
-      description:
-        'Create separate albums for each child, pregnancy journey, or special project. Organize all your memories in one place.',
+        'Bebeğinizin her anını kaydedin. İstediğiniz kadar albüm oluşturun, sınırsız fotoğraf ekleyin.',
     },
     {
       icon: Video,
-      title: 'Stunning Timelapse Videos',
+      title: 'Profesyonel Time-Lapse Videoları',
       description:
-        'Watch months or years of growth unfold in seconds. Generate beautiful HD timelapse videos with just 2 taps.',
+        'Fotoğraflarınızdan saniyeler içinde muhteşem time-lapse videoları oluşturun. Bebeğinizin büyümesini tek videoda izleyin.',
     },
     {
-      icon: Ghost,
-      title: 'Ghost Overlay',
+      icon: Sparkles,
+      title: 'HD ve Ultra HD Kalite',
       description:
-        'See the previous photo overlaid on your camera to ensure perfect alignment for smooth timelapse videos.',
+        '360p\'den 1080p\'ye kadar 4 farklı kalite seçeneği. Bebeğinizin her detayını kristal netliğinde kaydedin.',
     },
     {
-      icon: Grid3x3,
-      title: 'Grid Overlay',
+      icon: Droplet,
+      title: 'Özelleştirilebilir Filigranlar',
       description:
-        'Built-in grid lines help you position your subject consistently for professional-looking results.',
+        'Videolarınıza özel metin, tarih veya logo ekleyin. Dilediğiniz pozisyonda, dilediğiniz şekilde.',
     },
     {
-      icon: Lock,
-      title: 'Private & Secure',
+      icon: Share2,
+      title: 'Kolay Paylaşım',
       description:
-        'Your precious memories are safely stored. All photos sync securely with your iCloud account.',
+        'Videolarınızı tek dokunuşla aileniz ve arkadaşlarınızla paylaşın. WhatsApp, Instagram, AirDrop - her platformda.',
     },
     {
-      icon: Camera,
-      title: 'Easy Photo Capture',
+      icon: Zap,
+      title: 'Hızlı ve Kolay',
       description:
-        'Quick camera access from each album. Capture the moment in seconds without complicated menus.',
+        'Sadece fotoğraf çekin, uygulama gerisini halleder. Karmaşık editör programlarına gerek yok.',
     },
     {
-      icon: Palette,
-      title: 'Beautiful Design',
+      icon: Bell,
+      title: 'Akıllı Hatırlatmalar',
       description:
-        'Modern iOS design that feels natural and intuitive. Built following Apple\'s Human Interface Guidelines.',
+        'Günlük fotoğraf hatırlatmaları ile hiçbir anı kaçırmayın. Bebeğinizin her gününü kayıt altına alın.',
     },
     {
-      icon: Cloud,
-      title: 'Cloud Sync',
+      icon: Target,
+      title: 'Milestone Takibi',
       description:
-        'All your photos and videos safely backed up to the cloud. Access from any device, never lose a memory.',
+        'İlk hafta, ilk ay, 6. ay, 1. yaş... Tüm özel günleri otomatik olarak takip edin ve kutlayın.',
+    },
+    {
+      icon: Shield,
+      title: 'Güvenli ve Gizli',
+      description:
+        'Tüm fotoğraflarınız cihazınızda güvenle saklanır. Hiçbir veri buluta veya 3. taraflara gönderilmez.',
+    },
+    {
+      icon: Gift,
+      title: '3 Gün Ücretsiz Deneme',
+      description:
+        'Risk yok, kredi kartı bilgisi yok. 3 gün boyunca tüm özellikleri ücretsiz deneyin, sonra karar verin.',
     },
   ]
 
