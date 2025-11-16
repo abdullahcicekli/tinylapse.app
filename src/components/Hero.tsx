@@ -1,4 +1,6 @@
 import { Smartphone, Camera, Video, Baby, Heart } from 'lucide-react'
+import Lottie from 'lottie-react'
+import onboarding1Animation from '/onboarding1.json'
 
 export default function Hero() {
   const stats = [
@@ -8,8 +10,18 @@ export default function Hero() {
     { icon: Heart, text: 'Memories Forever' },
   ]
 
+  const lottieOptions = {
+    animationData: onboarding1Animation,
+    loop: true,
+    autoplay: true,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+      progressiveLoad: true,
+    },
+  }
+
   return (
-    <section className="relative min-h-screen flex items-center pt-16">
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-16">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -71,18 +83,14 @@ export default function Hero() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
-              
+
               {/* iPhone Mockup */}
-              <div className="relative bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-[3rem] p-4 aspect-[9/19] w-64 sm:w-80">
-                <div className="w-full h-full bg-gray-800 rounded-[2.5rem] flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <Camera size={64} className="text-brand-green mx-auto" />
-                    <p className="text-gray-400 text-sm">
-                      App Screenshot
-                      <br />
-                      Coming Soon
-                    </p>
-                  </div>
+              <div className="relative bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-[3rem] p-3 sm:p-4 aspect-[9/19] w-64 sm:w-80 md:w-96 shadow-2xl">
+                <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden flex items-center justify-center">
+                  <Lottie
+                    {...lottieOptions}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
