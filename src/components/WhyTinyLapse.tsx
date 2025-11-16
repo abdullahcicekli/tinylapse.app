@@ -6,52 +6,24 @@ import {
   Lock,
   DollarSign,
 } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function WhyTinyLapse() {
-  const reasons = [
-    {
-      icon: Clock,
-      title: 'Zamandan Tasarruf',
-      description:
-        'Dakikalar içinde profesyonel time-lapse videoları oluşturun',
-    },
-    {
-      icon: Smartphone,
-      title: 'Kullanımı Kolay',
-      description:
-        'Karmaşık ayarlara gerek yok, her şey otomatik',
-    },
-    {
-      icon: Film,
-      title: 'Sinema Kalitesi',
-      description:
-        'HD ve 4K kalitede videolar, tıpkı profesyoneller gibi',
-    },
-    {
-      icon: Heart,
-      title: 'Duygusal Bağlantı',
-      description:
-        'Bebeğinizin büyümesini izlemek paha biçilemez bir deneyim',
-    },
-    {
-      icon: Lock,
-      title: '%100 Güvenli',
-      description:
-        'Verileriniz sadece sizin cihazınızda, başka hiçbir yerde değil',
-    },
-    {
-      icon: DollarSign,
-      title: 'Uygun Fiyat',
-      description:
-        'Haftalık $4.99 veya yıllık $39.99 - profesyonel bir fotoğrafçıdan çok daha ekonomik',
-    },
-  ]
+  const { t } = useLanguage()
+
+  const icons = [Clock, Smartphone, Film, Heart, Lock, DollarSign]
+
+  const reasons = t.whyTinyLapse.reasons.map((reason, index) => ({
+    icon: icons[index],
+    title: reason.title,
+    description: reason.description,
+  }))
 
   return (
     <section className="section-container bg-gradient-to-b from-gray-900 to-black">
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Neden <span className="gradient-text">TinyLapse</span>?
+          {t.whyTinyLapse.title} <span className="gradient-text">{t.whyTinyLapse.titleHighlight}</span>?
         </h2>
       </div>
 

@@ -1,36 +1,26 @@
 import { Check, Gift } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Pricing() {
+  const { t } = useLanguage()
+
   const plans = [
     {
-      name: 'Haftalık Plan',
+      name: t.pricing.plans.weekly.name,
       price: '$4.99',
-      period: 'hafta',
-      description: 'Kısa süreli kullanımlar için ideal',
-      features: [
-        'Sınırsız albüm ve fotoğraf',
-        'HD ve Ultra HD kalite',
-        'Özelleştirilebilir filigranlar',
-        'Akıllı hatırlatmalar',
-        'Milestone takibi',
-        'Güvenli ve gizli',
-      ],
+      period: t.pricing.plans.weekly.period,
+      description: t.pricing.plans.weekly.description,
+      features: t.pricing.plans.weekly.features,
+      highlighted: false,
     },
     {
-      name: 'Yıllık Plan',
+      name: t.pricing.plans.yearly.name,
       price: '$39.99',
-      period: 'yıl',
-      description: 'En popüler seçenek - %83 tasarruf!',
-      features: [
-        'Tüm haftalık plan özellikleri',
-        '%83 tasarruf ($259.48\'den $39.99)',
-        'Tam bir yıl sınırsız erişim',
-        'En uygun fiyat garantisi',
-        'İptal etmek tamamen ücretsiz',
-        'Öncelikli müşteri desteği',
-      ],
+      period: t.pricing.plans.yearly.period,
+      description: t.pricing.plans.yearly.description,
+      features: t.pricing.plans.yearly.features,
       highlighted: true,
-      badge: 'EN POPÜLER',
+      badge: t.pricing.plans.yearly.badge,
     },
   ]
 
@@ -38,12 +28,12 @@ export default function Pricing() {
     <section className="section-container bg-gradient-to-b from-gray-900 to-black">
       <div className="text-center space-y-4 mb-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Şimdi <span className="gradient-text">Başlayın</span>
+          {t.pricing.title} <span className="gradient-text">{t.pricing.titleHighlight}</span>
         </h2>
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-green/20 to-brand-blue/20 border border-brand-green/30 rounded-full px-6 py-3">
           <Gift className="w-5 h-5 text-brand-green" />
           <p className="text-lg text-gray-300">
-            <span className="font-bold text-brand-green">3 Gün Ücretsiz Deneyin</span> - Risk yok, kredi kartı bilgisi gerekmez
+            <span className="font-bold text-brand-green">{t.pricing.freeTrial}</span> - {t.pricing.freeTrialBadge}
           </p>
         </div>
       </div>
@@ -99,11 +89,11 @@ export default function Pricing() {
                     : 'bg-gray-800 text-white hover:bg-gray-700'
                 }`}
               >
-                Şimdi Başla
+                {t.pricing.cta}
               </a>
 
               <p className="text-center text-xs text-gray-500">
-                İstediğiniz zaman iptal edebilirsiniz
+                {t.pricing.cancelAnytime}
               </p>
             </div>
           </div>
@@ -112,8 +102,7 @@ export default function Pricing() {
 
       <div className="mt-16 text-center space-y-4">
         <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-          Tüm planlar 3 gün ücretsiz deneme ile başlar. Deneme süresi boyunca tüm özelliklere tam erişiminiz olacak.
-          İptal etmek tamamen ücretsiz ve kolaydır. Herhangi bir soru sorulmaz.
+          {t.pricing.disclaimer}
         </p>
       </div>
     </section>

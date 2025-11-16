@@ -1,38 +1,19 @@
 import { Quote } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: 'Ayşe',
-      location: 'Ankara',
-      title: 'İnanılmaz!',
-      content:
-        'Bebeğimin ilk yılını tek videoda izlemek beni ağlattı. Herkese tavsiye ediyorum!',
-      rating: 5,
-    },
-    {
-      name: 'Mehmet',
-      location: 'İstanbul',
-      title: 'Çok Kolay',
-      content:
-        'Teknolojiden anlamam ama bu uygulamayı kullanmak çok kolay. Harika!',
-      rating: 5,
-    },
-    {
-      name: 'Sarah',
-      location: 'London',
-      title: 'Paha Biçilemez Anılar',
-      content:
-        '1 yaşına girdiğinde tüm aileye gösterdiğimiz video için herkesten alkış aldık!',
-      rating: 5,
-    },
-  ]
+  const { t } = useLanguage()
+
+  const testimonials = t.testimonials.items.map((item) => ({
+    ...item,
+    rating: 5,
+  }))
 
   return (
     <section className="section-container bg-gray-900/20">
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Kullanıcı <span className="gradient-text">Yorumları</span>
+          {t.testimonials.title} <span className="gradient-text">{t.testimonials.titleHighlight}</span>
         </h2>
       </div>
 

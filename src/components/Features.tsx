@@ -10,76 +10,24 @@ import {
   Shield,
   Gift,
 } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Features() {
-  const features = [
-    {
-      icon: FolderOpen,
-      title: 'Sınırsız Albüm ve Fotoğraf',
-      description:
-        'Bebeğinizin her anını kaydedin. İstediğiniz kadar albüm oluşturun, sınırsız fotoğraf ekleyin.',
-    },
-    {
-      icon: Video,
-      title: 'Profesyonel Time-Lapse Videoları',
-      description:
-        'Fotoğraflarınızdan saniyeler içinde muhteşem time-lapse videoları oluşturun. Bebeğinizin büyümesini tek videoda izleyin.',
-    },
-    {
-      icon: Sparkles,
-      title: 'HD ve Ultra HD Kalite',
-      description:
-        '360p\'den 1080p\'ye kadar 4 farklı kalite seçeneği. Bebeğinizin her detayını kristal netliğinde kaydedin.',
-    },
-    {
-      icon: Droplet,
-      title: 'Özelleştirilebilir Filigranlar',
-      description:
-        'Videolarınıza özel metin, tarih veya logo ekleyin. Dilediğiniz pozisyonda, dilediğiniz şekilde.',
-    },
-    {
-      icon: Share2,
-      title: 'Kolay Paylaşım',
-      description:
-        'Videolarınızı tek dokunuşla aileniz ve arkadaşlarınızla paylaşın. WhatsApp, Instagram, AirDrop - her platformda.',
-    },
-    {
-      icon: Zap,
-      title: 'Hızlı ve Kolay',
-      description:
-        'Sadece fotoğraf çekin, uygulama gerisini halleder. Karmaşık editör programlarına gerek yok.',
-    },
-    {
-      icon: Bell,
-      title: 'Akıllı Hatırlatmalar',
-      description:
-        'Günlük fotoğraf hatırlatmaları ile hiçbir anı kaçırmayın. Bebeğinizin her gününü kayıt altına alın.',
-    },
-    {
-      icon: Target,
-      title: 'Milestone Takibi',
-      description:
-        'İlk hafta, ilk ay, 6. ay, 1. yaş... Tüm özel günleri otomatik olarak takip edin ve kutlayın.',
-    },
-    {
-      icon: Shield,
-      title: 'Güvenli ve Gizli',
-      description:
-        'Tüm fotoğraflarınız cihazınızda güvenle saklanır. Hiçbir veri buluta veya 3. taraflara gönderilmez.',
-    },
-    {
-      icon: Gift,
-      title: '3 Gün Ücretsiz Deneme',
-      description:
-        'Risk yok, kredi kartı bilgisi yok. 3 gün boyunca tüm özellikleri ücretsiz deneyin, sonra karar verin.',
-    },
-  ]
+  const { t } = useLanguage()
+
+  const icons = [FolderOpen, Video, Sparkles, Droplet, Share2, Zap, Bell, Target, Shield, Gift]
+
+  const features = t.features.items.map((item, index) => ({
+    icon: icons[index],
+    title: item.title,
+    description: item.description,
+  }))
 
   return (
     <section id="features" className="section-container">
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Everything You Need to <span className="gradient-text">Track Growth</span>
+          {t.features.title} <span className="gradient-text">{t.features.titleHighlight}</span>
         </h2>
       </div>
 

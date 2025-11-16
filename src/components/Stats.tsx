@@ -4,40 +4,25 @@ import {
   Star,
   Zap,
 } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Stats() {
-  const stats = [
-    {
-      icon: Baby,
-      value: 'Binlerce',
-      label: 'Her Gün Binlerce Bebek',
-      description: 'Dünya genelinde binlerce ebeveyn TinyLapse ile bebeklerinin büyümesini kaydediyor',
-    },
-    {
-      icon: Camera,
-      value: 'Milyonlarca',
-      label: 'Milyonlarca Fotoğraf',
-      description: 'Her gün milyonlarca değerli an TinyLapse ile korunuyor',
-    },
-    {
-      icon: Star,
-      value: '4.8/5',
-      label: 'Kullanıcı Memnuniyeti',
-      description: 'Kullanıcılarımızın %95\'i TinyLapse\'i arkadaşlarına öneriyor',
-    },
-    {
-      icon: Zap,
-      value: '30 Saniye',
-      label: 'Hızlı Video Oluşturma',
-      description: 'Ortalama bir time-lapse videosu 30 saniyeden kısa sürede hazır',
-    },
-  ]
+  const { t } = useLanguage()
+
+  const icons = [Baby, Camera, Star, Zap]
+
+  const stats = t.stats.items.map((item, index) => ({
+    icon: icons[index],
+    value: item.value,
+    label: item.label,
+    description: item.description,
+  }))
 
   return (
     <section className="section-container bg-gradient-to-b from-black to-gray-900">
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Rakamlarla <span className="gradient-text">TinyLapse</span>
+          {t.stats.title} <span className="gradient-text">{t.stats.titleHighlight}</span>
         </h2>
       </div>
 

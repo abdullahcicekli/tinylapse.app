@@ -1,20 +1,24 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Globe } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
+import { supportedLanguages, languageNames, type Language } from '../locales'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const location = useLocation()
+  const { language, setLanguage, t } = useLanguage()
 
   const isActive = (path: string) => {
     return location.pathname === path || location.hash === path
   }
 
   const navLinks = [
-    { name: 'Features', path: '/#features' },
-    { name: 'How It Works', path: '/#how-it-works' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' },
+    { name: t.nav.features, path: '/#features' },
+    { name: t.nav.howItWorks, path: '/#how-it-works' },
+    { name: t.nav.faq, path: '/faq' },
+    { name: t.nav.contact, path: '/contact' },
   ]
 
   return (
@@ -46,15 +50,49 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
+
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-brand-green transition-colors duration-300"
+                aria-label="Change language"
+              >
+                <Globe size={18} />
+                <span>{language.toUpperCase()}</span>
+              </button>
+
+              {isLangMenuOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-800 rounded-lg shadow-xl overflow-hidden">
+                  {supportedLanguages.map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => {
+                        setLanguage(lang as Language)
+                        setIsLangMenuOpen(false)
+                      }}
+                      className={`w-full text-left px-4 py-2 text-sm transition-colors duration-200 ${
+                        language === lang
+                          ? 'bg-brand-green/20 text-brand-green'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-brand-green'
+                      }`}
+                    >
+                      {languageNames[lang]}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <a
               href="https://apps.apple.com/app/tinylapse"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform duration-300 hover:scale-105"
             >
-              <img 
-                src="/download_badge.png" 
-                alt="Download on the App Store" 
+              <img
+                src="/download_badge.png"
+                alt="Download on the App Store"
                 className="h-8 w-auto"
               />
             </a>
@@ -88,15 +126,42 @@ export default function Header() {
                   {link.name}
                 </a>
               ))}
+
+              {/* Mobile Language Switcher */}
+              <div className="border-t border-gray-800 pt-4">
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-400 mb-2">
+                  <Globe size={16} />
+                  <span>Language</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {supportedLanguages.map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => {
+                        setLanguage(lang as Language)
+                        setIsMenuOpen(false)
+                      }}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                        language === lang
+                          ? 'bg-brand-green/20 text-brand-green border border-brand-green/30'
+                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-brand-green'
+                      }`}
+                    >
+                      {languageNames[lang]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <a
                 href="https://apps.apple.com/app/tinylapse"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex justify-center transition-transform duration-300 hover:scale-105"
               >
-                <img 
-                  src="/download_badge.png" 
-                  alt="Download on the App Store" 
+                <img
+                  src="/download_badge.png"
+                  alt="Download on the App Store"
                   className="h-10 w-auto"
                 />
               </a>
