@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react'
-import onboarding4Animation from '/onboarding4.json'
+import onboarding4Animation from '../assets/onboarding4.json'
 
 export default function VideoShowcase() {
   const lottieOptions = {
