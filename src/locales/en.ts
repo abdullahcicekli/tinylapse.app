@@ -71,6 +71,10 @@ export const en: Translation = {
         title: '3-Day Free Trial',
         description: 'Pay securely through Apple. Try free for 3 days, cancel anytime.',
       },
+      {
+        title: 'Multi-Language Support',
+        description: 'Available in English, Turkish, German, and Spanish. Use TinyLapse in your preferred language.',
+      },
     ],
   },
 
@@ -468,7 +472,7 @@ export const en: Translation = {
       },
       {
         title: '5. Subscriptions and Payments',
-        content: 'TinyLapse offers both free and premium features:',
+        content: 'TinyLapse is a subscription-based service with a 3-day free trial:',
         items: [
           'Subscriptions are managed through the Apple App Store and are subject to Apple\'s terms',
           'You will be charged through your Apple ID account at confirmation of purchase',

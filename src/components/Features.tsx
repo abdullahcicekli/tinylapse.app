@@ -9,13 +9,14 @@ import {
   Target,
   Shield,
   Gift,
+  Languages,
 } from 'lucide-react'
 import { useLanguage } from '../hooks/useLanguage'
 
 export default function Features() {
   const { t } = useLanguage()
 
-  const icons = [FolderOpen, Video, Sparkles, Droplet, Share2, Zap, Bell, Target, Shield, Gift]
+  const icons = [FolderOpen, Video, Sparkles, Droplet, Share2, Zap, Bell, Target, Shield, Gift, Languages]
 
   const features = t.features.items.map((item, index) => ({
     icon: icons[index],

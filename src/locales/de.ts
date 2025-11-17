@@ -71,6 +71,10 @@ export const de: Translation = {
         title: '3 Tage Kostenlose Testversion',
         description: 'Bezahlen Sie sicher über Apple. Testen Sie 3 Tage kostenlos, jederzeit kündbar.',
       },
+      {
+        title: 'Mehrsprachige Unterstützung',
+        description: 'Verfügbar in Englisch, Türkisch, Deutsch und Spanisch. Verwenden Sie TinyLapse in Ihrer bevorzugten Sprache.',
+      },
     ],
   },
 
@@ -468,7 +472,7 @@ export const de: Translation = {
       },
       {
         title: '5. Abonnements und Zahlungen',
-        content: 'TinyLapse bietet sowohl kostenlose als auch Premium-Funktionen:',
+        content: 'TinyLapse ist ein abonnementbasierter Dienst mit einer 3-tägigen kostenlosen Testversion:',
         items: [
           'Abonnements werden über den Apple App Store verwaltet und unterliegen den Bedingungen von Apple',
           'Sie werden bei Kaufbestätigung über Ihr Apple ID-Konto belastet',

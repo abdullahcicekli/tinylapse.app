@@ -71,6 +71,10 @@ export const es: Translation = {
         title: 'Prueba Gratis de 3 Días',
         description: 'Paga de forma segura a través de Apple. Prueba gratis por 3 días, cancela en cualquier momento.',
       },
+      {
+        title: 'Soporte Multiidioma',
+        description: 'Disponible en inglés, turco, alemán y español. Usa TinyLapse en tu idioma preferido.',
+      },
     ],
   },
 
@@ -468,7 +472,7 @@ export const es: Translation = {
       },
       {
         title: '5. Suscripciones y Pagos',
-        content: 'TinyLapse ofrece funciones gratuitas y premium:',
+        content: 'TinyLapse es un servicio basado en suscripción con una prueba gratuita de 3 días:',
         items: [
           'Las suscripciones se gestionan a través de la App Store de Apple y están sujetas a los términos de Apple',
           'Se te cobrará a través de tu cuenta de Apple ID al confirmar la compra',
