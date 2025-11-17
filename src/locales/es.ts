@@ -73,7 +73,7 @@ export const es: Translation = {
       },
       {
         title: 'Soporte Multiidioma',
-        description: 'Disponible en inglés, turco, alemán y español. Usa TinyLapse en tu idioma preferido.',
+        description: 'Disponible en inglés, turco, alemán, español, francés y árabe. Usa TinyLapse en tu idioma preferido.',
       },
     ],
   },
