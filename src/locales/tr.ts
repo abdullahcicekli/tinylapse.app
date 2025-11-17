@@ -73,7 +73,7 @@ export const tr: Translation = {
       },
       {
         title: 'Çok Dilli Destek',
-        description: 'İngilizce, Türkçe, Almanca ve İspanyolca dillerinde mevcut. TinyLapse\'i tercih ettiğiniz dilde kullanın.',
+        description: 'İngilizce, Türkçe, Almanca, İspanyolca, Fransızca ve Arapça dillerinde mevcut. TinyLapse\'i tercih ettiğiniz dilde kullanın.',
       },
     ],
   },
