@@ -21,7 +21,7 @@ export default function Terms() {
       <section className="section-container pt-44 md:pt-32">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-8">
               {t.terms.title}
             </h1>
             <p className="text-gray-400">{t.terms.lastUpdated}: {currentDate}</p>
