@@ -2,6 +2,7 @@ import { tr } from './tr'
 import { en } from './en'
 import { es } from './es'
 import { de } from './de'
+import { fr } from './fr'
 import type { Language, Translation } from './types'
 
 export const translations: Record<Language, Translation> = {
@@ -9,17 +10,19 @@ export const translations: Record<Language, Translation> = {
   en,
   es,
   de,
+  fr,
 }
 
 export const defaultLanguage: Language = 'en'
 
-export const supportedLanguages: Language[] = ['tr', 'en', 'es', 'de']
+export const supportedLanguages: Language[] = ['tr', 'en', 'es', 'de', 'fr']
 
 export const languageNames: Record<Language, string> = {
   tr: 'Türkçe',
   en: 'English',
   es: 'Español',
   de: 'Deutsch',
+  fr: 'Français',
 }
 
 // Detect browser language and return supported language or default
