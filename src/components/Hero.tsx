@@ -37,19 +37,19 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-gray-900 border border-gray-800 rounded-full px-4 py-2">
-              <Smartphone size={16} className="text-brand-green" />
-              <span className="text-sm text-gray-300">{t.hero.badge}</span>
+            <div className="inline-flex items-center space-x-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-full px-4 py-2">
+              <Smartphone size={16} className="text-brand-green-dark dark:text-brand-green" />
+              <span className="text-sm text-gray-700 dark:text-gray-300">{t.hero.badge}</span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
               {t.hero.title}{' '}
               <span className="gradient-text">{t.hero.titleHighlight}</span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg text-gray-300 max-w-2xl">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
               {t.hero.subtitle}
             </p>
 
@@ -78,8 +78,8 @@ export default function Hero() {
                     key={index}
                     className="flex flex-col items-center text-center space-y-2"
                   >
-                    <Icon size={24} className="text-brand-green" />
-                    <span className="text-sm text-gray-400">{stat.text}</span>
+                    <Icon size={24} className="text-brand-green-dark dark:text-brand-green" />
+                    <span className="text-sm text-gray-500 dark:text-gray-400">{stat.text}</span>
                   </div>
                 )
               })}
@@ -90,11 +90,11 @@ export default function Hero() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
+              <div className="absolute inset-0 bg-brand-green/10 dark:bg-accent/20 blur-3xl rounded-full"></div>
 
               {/* iPhone Mockup */}
-              <div className="relative bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-[3rem] p-3 sm:p-4 aspect-[9/19] w-64 sm:w-80 md:w-96 shadow-2xl">
-                <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden flex items-center justify-center">
+              <div className="relative bg-gradient-to-b from-gray-200 to-gray-300/50 dark:from-gray-900 dark:to-gray-900/50 border border-gray-300 dark:border-gray-800 rounded-[3rem] p-3 sm:p-4 aspect-[9/19] w-64 sm:w-80 md:w-96 shadow-2xl">
+                <div className="w-full h-full bg-white dark:bg-black rounded-[2.5rem] overflow-hidden flex items-center justify-center">
                   {animationData && (
                     <Lottie
                       {...lottieOptions}

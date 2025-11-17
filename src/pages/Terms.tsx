@@ -21,16 +21,16 @@ export default function Terms() {
       <section className="section-container pt-44 md:pt-32">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-8">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-8 text-gray-900 dark:text-white">
               {t.terms.title}
             </h1>
-            <p className="text-gray-400">{t.terms.lastUpdated}: {currentDate}</p>
+            <p className="text-gray-600 dark:text-gray-400">{t.terms.lastUpdated}: {currentDate}</p>
           </div>
 
-          <div className="prose prose-invert max-w-none space-y-8">
+          <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
             {/* Introduction */}
             <div className="space-y-4">
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t.terms.intro}
               </p>
             </div>
@@ -38,16 +38,16 @@ export default function Terms() {
             {/* Dynamic Sections */}
             {t.terms.sections.map((section, index) => (
               <div key={index} className="space-y-4">
-                <h2 className="text-2xl font-bold text-white">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                   {section.title}
                 </h2>
                 {section.content && (
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     {section.content}
                   </p>
                 )}
                 {section.items && section.items.length > 0 && (
-                  <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                  <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
                     {section.items.map((item, itemIndex) => (
                       <li key={itemIndex}>{item}</li>
                     ))}
@@ -55,11 +55,11 @@ export default function Terms() {
                 )}
                 {/* Show contact email on last section */}
                 {index === t.terms.sections.length - 1 && (
-                  <p className="text-gray-300">
+                  <p className="text-gray-700 dark:text-gray-300">
                     Email:{' '}
                     <a
                       href={`mailto:${t.terms.contactEmail}`}
-                      className="text-brand-green hover:text-brand-blue transition-colors"
+                      className="text-brand-green-dark dark:text-brand-green hover:text-brand-blue-dark dark:hover:text-brand-blue transition-colors"
                     >
                       {t.terms.contactEmail}
                     </a>

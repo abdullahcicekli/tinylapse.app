@@ -5,6 +5,7 @@ import Router from './router'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 // Scroll to top component
 function ScrollToTop() {
@@ -22,16 +23,18 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
-      <LanguageProvider>
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            <Router />
-          </main>
-          <Footer />
-        </div>
-      </LanguageProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <ScrollToTop />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+              <Router />
+            </main>
+            <Footer />
+          </div>
+        </LanguageProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

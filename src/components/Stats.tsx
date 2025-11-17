@@ -19,9 +19,9 @@ export default function Stats() {
   }))
 
   return (
-    <section className="section-container bg-gradient-to-b from-black to-gray-900">
+    <section className="section-container bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900">
       <div className="text-center space-y-4 mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           {t.stats.title} <span className="gradient-text">{t.stats.titleHighlight}</span>
         </h2>
       </div>
@@ -36,7 +36,7 @@ export default function Stats() {
           return (
             <div
               key={index}
-              className="relative group text-center p-8 bg-gradient-to-br from-gray-900 via-gray-900/80 to-gray-900/50 border border-gray-800 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="relative group text-center p-8 bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-900/80 dark:to-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"
                    style={{ background: `linear-gradient(to bottom right, rgba(212, 247, 165, 0.1), transparent)` }}
@@ -49,11 +49,11 @@ export default function Stats() {
                 </div>
 
                 <div className="space-y-2">
-                  <div className="text-4xl font-bold transition-colors duration-300 group-hover:text-brand-green">
+                  <div className="text-4xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-brand-green-dark dark:group-hover:text-brand-green">
                     {stat.value}
                   </div>
-                  <h3 className="text-lg font-semibold">{stat.label}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{stat.label}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
                     {stat.description}
                   </p>
                 </div>

@@ -16,13 +16,13 @@ export default function VideoShowcase() {
   }
 
   return (
-    <section className="section-container bg-gradient-to-b from-gray-900/20 to-transparent">
+    <section className="section-container bg-gradient-to-b from-gray-50 to-white dark:from-gray-900/20 dark:to-transparent">
       <div className="text-center space-y-6 mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           {t.videoShowcase.title}{' '}
           <span className="gradient-text">{t.videoShowcase.titleHighlight}</span>
         </h2>
-        <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
           {t.videoShowcase.subtitle}
         </p>
       </div>
@@ -32,7 +32,7 @@ export default function VideoShowcase() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-green/20 via-accent/20 to-brand-green/20 blur-3xl opacity-50"></div>
 
         {/* Video Container */}
-        <div className="relative bg-gradient-to-br from-gray-900 via-gray-900/90 to-gray-900/80 border border-gray-800 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-900/90 dark:to-gray-900/80 border border-gray-200 dark:border-gray-800 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
           <div className="aspect-video w-full">
             <Lottie
               {...lottieOptions}
@@ -49,9 +49,9 @@ export default function VideoShowcase() {
       {/* Stats or Features */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 max-w-4xl mx-auto">
         {t.videoShowcase.stats.map((stat, index) => (
-          <div key={index} className="text-center space-y-2 p-6 bg-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-brand-green/30 transition-colors duration-300">
+          <div key={index} className="text-center space-y-2 p-6 bg-white dark:bg-gray-900/30 rounded-2xl border border-gray-200 dark:border-gray-800/50 hover:border-brand-green/30 transition-colors duration-300">
             <div className="text-3xl sm:text-4xl font-bold gradient-text">{stat.value}</div>
-            <p className="text-sm sm:text-base text-gray-400">{stat.label}</p>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">{stat.label}</p>
           </div>
         ))}
       </div>

@@ -10,8 +10,8 @@ export default function NotFound() {
       <section className="section-container pt-32 min-h-[60vh] flex items-center justify-center">
         <div className="text-center space-y-6">
           <h1 className="text-9xl font-bold gradient-text">404</h1>
-          <h2 className="text-3xl font-bold">Page Not Found</h2>
-          <p className="text-gray-400 max-w-md mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Page Not Found</h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
             Sorry, we couldn't find the page you're looking for. It might have been moved
             or deleted.
           </p>
