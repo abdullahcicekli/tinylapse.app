@@ -3,6 +3,7 @@ import { en } from './en'
 import { es } from './es'
 import { de } from './de'
 import { fr } from './fr'
+import { ar } from './ar'
 import type { Language, Translation } from './types'
 
 export const translations: Record<Language, Translation> = {
@@ -11,11 +12,12 @@ export const translations: Record<Language, Translation> = {
   es,
   de,
   fr,
+  ar,
 }
 
 export const defaultLanguage: Language = 'en'
 
-export const supportedLanguages: Language[] = ['tr', 'en', 'es', 'de', 'fr']
+export const supportedLanguages: Language[] = ['tr', 'en', 'es', 'de', 'fr', 'ar']
 
 export const languageNames: Record<Language, string> = {
   tr: 'Türkçe',
@@ -23,6 +25,15 @@ export const languageNames: Record<Language, string> = {
   es: 'Español',
   de: 'Deutsch',
   fr: 'Français',
+  ar: 'العربية',
+}
+
+// RTL languages list
+export const rtlLanguages: Language[] = ['ar']
+
+// Check if a language is RTL
+export const isRTL = (language: Language): boolean => {
+  return rtlLanguages.includes(language)
 }
 
 // Detect browser language and return supported language or default
