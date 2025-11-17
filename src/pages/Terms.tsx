@@ -18,7 +18,7 @@ export default function Terms() {
         canonicalUrl="https://tinylapse.app/terms"
       />
 
-      <section className="section-container pt-36 md:pt-32">
+      <section className="section-container pt-44 md:pt-32">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
