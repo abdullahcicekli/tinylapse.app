@@ -1,4 +1,4 @@
-export type Language = 'tr' | 'en' | 'es' | 'de' | 'fr'
+export type Language = 'tr' | 'en' | 'es' | 'de' | 'fr' | 'ar'
 
 export interface Translation {
   // Navigation

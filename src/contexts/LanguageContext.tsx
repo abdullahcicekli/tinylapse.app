@@ -3,6 +3,7 @@ import {
   translations,
   detectBrowserLanguage,
   defaultLanguage,
+  isRTL,
   type Language,
   type Translation,
 } from '../locales'
@@ -11,6 +12,7 @@ interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
   t: Translation
+  isRTL: boolean
 }
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -44,13 +46,17 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   // Get current translation
   const t = translations[language] || translations[defaultLanguage]
 
-  // Update HTML lang attribute
+  // Check if current language is RTL
+  const isRTLLang = isRTL(language)
+
+  // Update HTML lang and dir attributes
   useEffect(() => {
     document.documentElement.lang = language
-  }, [language])
+    document.documentElement.dir = isRTLLang ? 'rtl' : 'ltr'
+  }, [language, isRTLLang])
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL: isRTLLang }}>
       {children}
     </LanguageContext.Provider>
   )

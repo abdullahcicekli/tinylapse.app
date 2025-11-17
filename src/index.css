@@ -63,3 +63,11 @@ html {
   @apply bg-gray-600;
 }
 
+/* RTL support */
+[dir='rtl'] {
+  direction: rtl;
+}
+
+[dir='ltr'] {
+  direction: ltr;
+}
