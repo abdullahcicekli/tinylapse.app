@@ -4,13 +4,13 @@ export default function CTA() {
   const { t } = useLanguage()
 
   return (
-    <section className="section-container">
-      <div className="bg-gradient-to-b from-accent/5 to-transparent border border-gray-800 rounded-3xl p-12 md:p-16 text-center">
+    <section className="section-container bg-white dark:bg-black">
+      <div className="bg-gradient-to-b from-accent/5 to-transparent border border-gray-200 dark:border-gray-800 rounded-3xl p-12 md:p-16 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
             {t.cta.title}
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             {t.cta.subtitle}
           </p>
           <div className="pt-4">
@@ -27,7 +27,7 @@ export default function CTA() {
               />
             </a>
           </div>
-          <p className="text-sm text-gray-500">{t.cta.availableText}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-500">{t.cta.availableText}</p>
         </div>
       </div>
     </section>

@@ -20,9 +20,9 @@ export default function WhyTinyLapse() {
   }))
 
   return (
-    <section className="section-container bg-gradient-to-b from-gray-900 to-black">
+    <section className="section-container bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
       <div className="text-center space-y-4 mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           {t.whyTinyLapse.title} <span className="gradient-text">{t.whyTinyLapse.titleHighlight}</span>?
         </h2>
       </div>
@@ -44,16 +44,14 @@ export default function WhyTinyLapse() {
           return (
             <div
               key={index}
-              className="relative group bg-gradient-to-br from-gray-900 via-gray-900/80 to-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden"
-              style={{
-                borderColor: 'rgb(31, 41, 55)',
-              }}
+              className="relative group bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-900/80 dark:to-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-2xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden"
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = colorValue.border;
                 e.currentTarget.style.boxShadow = `0 25px 50px -12px ${colorValue.shadow}`;
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgb(31, 41, 55)';
+                const isDark = document.documentElement.classList.contains('dark');
+                e.currentTarget.style.borderColor = isDark ? 'rgb(31, 41, 55)' : 'rgb(229, 231, 235)';
                 e.currentTarget.style.boxShadow = '';
               }}
             >
@@ -74,8 +72,8 @@ export default function WhyTinyLapse() {
                 >
                   <Icon size={36} style={{ color: colorValue.icon }} className="transition-all duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-brand-green">{reason.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-brand-green-dark dark:group-hover:text-brand-green">{reason.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
                   {reason.description}
                 </p>
               </div>

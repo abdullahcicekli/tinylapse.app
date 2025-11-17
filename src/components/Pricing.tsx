@@ -25,15 +25,15 @@ export default function Pricing() {
   ]
 
   return (
-    <section className="section-container bg-gradient-to-b from-gray-900 to-black">
+    <section className="section-container bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black">
       <div className="text-center space-y-4 mb-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           {t.pricing.title} <span className="gradient-text">{t.pricing.titleHighlight}</span>
         </h2>
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-green/20 to-brand-blue/20 border border-brand-green/30 rounded-full px-6 py-3">
           <Gift className="w-5 h-5 text-brand-green" />
-          <p className="text-lg text-gray-300">
-            <span className="font-bold text-brand-green">{t.pricing.freeTrial}</span> - {t.pricing.freeTrialBadge}
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            <span className="font-bold text-brand-green-dark dark:text-brand-green">{t.pricing.freeTrial}</span> - {t.pricing.freeTrialBadge}
           </p>
         </div>
       </div>
@@ -42,10 +42,10 @@ export default function Pricing() {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`relative group bg-gradient-to-br from-gray-900 via-gray-900/80 to-gray-900/50 border rounded-2xl p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300 ${
+            className={`relative group bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-900/80 dark:to-gray-900/50 border rounded-2xl p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300 ${
               plan.highlighted
                 ? 'border-brand-green shadow-xl shadow-brand-green/20'
-                : 'border-gray-800'
+                : 'border-gray-200 dark:border-gray-800'
             }`}
           >
             {plan.badge && (
@@ -58,15 +58,15 @@ export default function Pricing() {
 
             <div className="space-y-6">
               <div className="text-center space-y-2">
-                <h3 className="text-2xl font-bold">{plan.name}</h3>
-                <p className="text-gray-400 text-sm">{plan.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{plan.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">{plan.description}</p>
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-5xl font-bold gradient-text">{plan.price}</span>
-                  <span className="text-gray-400">/ {plan.period}</span>
+                  <span className="text-gray-600 dark:text-gray-400">/ {plan.period}</span>
                 </div>
               </div>
 
-              <div className="border-t border-gray-800 pt-6 space-y-3">
+              <div className="border-t border-gray-200 dark:border-gray-800 pt-6 space-y-3">
                 {plan.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <Check
@@ -74,7 +74,7 @@ export default function Pricing() {
                         plan.highlighted ? 'text-brand-green' : 'text-brand-blue'
                       }`}
                     />
-                    <span className="text-gray-300 text-sm">{feature}</span>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -86,13 +86,13 @@ export default function Pricing() {
                 className={`block w-full text-center py-4 rounded-xl font-semibold transition-all duration-300 ${
                   plan.highlighted
                     ? 'bg-gradient-to-r from-brand-green to-brand-blue text-black hover:shadow-lg hover:shadow-brand-green/50 hover:scale-105'
-                    : 'bg-gray-800 text-white hover:bg-gray-700'
+                    : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
                 }`}
               >
                 {t.pricing.cta}
               </a>
 
-              <p className="text-center text-xs text-gray-500">
+              <p className="text-center text-xs text-gray-500 dark:text-gray-500">
                 {t.pricing.cancelAnytime}
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function Pricing() {
       </div>
 
       <div className="mt-16 text-center space-y-4">
-        <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 text-sm max-w-2xl mx-auto">
           {t.pricing.disclaimer}
         </p>
       </div>

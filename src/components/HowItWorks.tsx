@@ -13,13 +13,13 @@ export default function HowItWorks() {
   }))
 
   return (
-    <section id="how-it-works" className="section-container bg-gray-900/20">
+    <section id="how-it-works" className="section-container bg-gray-50 dark:bg-gray-900/20">
       <div className="text-center space-y-4 mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           {t.howItWorks.title}{' '}
           <span className="gradient-text">{t.howItWorks.titleHighlight}</span>
         </h2>
-        <p className="text-lg text-gray-400">
+        <p className="text-lg text-gray-600 dark:text-gray-400">
           {t.howItWorks.subtitle}
         </p>
       </div>
@@ -28,7 +28,7 @@ export default function HowItWorks() {
       <div className="hidden md:block">
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-800 -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 dark:bg-gray-800 -translate-y-1/2"></div>
 
           <div className="grid grid-cols-4 gap-8">
             {steps.map((step, index) => {
@@ -46,8 +46,8 @@ export default function HowItWorks() {
 
                   {/* Content */}
                   <div className="space-y-2">
-                    <h3 className="text-xl font-semibold">{step.title}</h3>
-                    <p className="text-gray-400 text-sm">{step.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{step.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">{step.description}</p>
                   </div>
                 </div>
               )
@@ -70,15 +70,15 @@ export default function HowItWorks() {
                   {index + 1}
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="w-0.5 h-full bg-gray-800 mt-4"></div>
+                  <div className="w-0.5 h-full bg-gray-300 dark:bg-gray-800 mt-4"></div>
                 )}
               </div>
 
               {/* Content */}
               <div className="flex-1 pb-8">
                 <div className="space-y-3">
-                  <h3 className="text-xl font-semibold">{step.title}</h3>
-                  <p className="text-gray-400 text-sm">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{step.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{step.description}</p>
                 </div>
               </div>
             </div>

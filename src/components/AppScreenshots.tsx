@@ -99,15 +99,15 @@ export default function AppScreenshots() {
   }, [isDragging])
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             {t.appScreenshots.title}{' '}
             <span className="gradient-text">{t.appScreenshots.titleHighlight}</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t.appScreenshots.subtitle}
           </p>
         </div>
@@ -118,7 +118,7 @@ export default function AppScreenshots() {
           {canScrollLeft && (
             <button
               onClick={() => scroll('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800 border border-gray-700 rounded-full p-3 transition-all duration-300 hover:scale-110 hidden md:block"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-900/90 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full p-3 transition-all duration-300 hover:scale-110 hidden md:block"
               aria-label="Scroll left"
             >
               <ChevronLeft size={24} className="text-brand-green" />
@@ -129,7 +129,7 @@ export default function AppScreenshots() {
           {canScrollRight && (
             <button
               onClick={() => scroll('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800 border border-gray-700 rounded-full p-3 transition-all duration-300 hover:scale-110 hidden md:block"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-900/90 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full p-3 transition-all duration-300 hover:scale-110 hidden md:block"
               aria-label="Scroll right"
             >
               <ChevronRight size={24} className="text-brand-green" />
@@ -166,9 +166,9 @@ export default function AppScreenshots() {
                     <div className="absolute inset-0 bg-brand-green/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                     {/* Phone Frame */}
-                    <div className="relative bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-[3rem] p-3 sm:p-4 w-72 sm:w-80 shadow-2xl transition-transform duration-300 group-hover:scale-105">
+                    <div className="relative bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-900 dark:to-gray-900/50 border border-gray-300 dark:border-gray-800 rounded-[3rem] p-3 sm:p-4 w-72 sm:w-80 shadow-2xl transition-transform duration-300 group-hover:scale-105">
                       {/* Notch */}
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-b-3xl z-10"></div>
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-gray-900 dark:bg-black rounded-b-3xl z-10"></div>
 
                       {/* Screen */}
                       <div className="relative w-full bg-black rounded-[2.5rem] overflow-hidden aspect-[9/19.5]">
@@ -184,10 +184,10 @@ export default function AppScreenshots() {
 
                   {/* Text Content */}
                   <div className="text-center space-y-2 max-w-xs">
-                    <h3 className="text-xl font-bold text-white">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                       {screenshot.title}
                     </h3>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       {screenshot.description}
                     </p>
                   </div>
@@ -201,7 +201,7 @@ export default function AppScreenshots() {
             {screenshots.map((_, index) => (
               <div
                 key={index}
-                className="w-2 h-2 rounded-full bg-gray-700 transition-all duration-300"
+                className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition-all duration-300"
               ></div>
             ))}
           </div>

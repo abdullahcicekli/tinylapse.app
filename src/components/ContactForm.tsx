@@ -53,7 +53,7 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Name *
           </label>
           <input
@@ -63,14 +63,14 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300"
+            className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300"
             placeholder="Your name"
           />
         </div>
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Email *
           </label>
           <input
@@ -80,14 +80,14 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300"
+            className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300"
             placeholder="your@email.com"
           />
         </div>
 
         {/* Subject */}
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Subject *
           </label>
           <input
@@ -97,14 +97,14 @@ export default function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300"
+            className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300"
             placeholder="What's this about?"
           />
         </div>
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Message *
           </label>
           <textarea
@@ -114,7 +114,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300 resize-none"
+            className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all duration-300 resize-none"
             placeholder="Your message..."
           />
         </div>
@@ -153,11 +153,11 @@ export default function ContactForm() {
 
       {/* Contact Info */}
       <div className="mt-8 text-center">
-        <p className="text-gray-400 text-sm">
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
           Or email us directly at{' '}
           <a
             href="mailto:support@tinylapse.app"
-            className="text-brand-green hover:text-brand-blue transition-colors"
+            className="text-brand-green-dark dark:text-brand-green hover:text-brand-blue transition-colors"
           >
             support@tinylapse.app
           </a>
