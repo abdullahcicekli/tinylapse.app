@@ -71,6 +71,10 @@ export const tr: Translation = {
         title: '3 Gün Ücretsiz Deneme',
         description: 'Apple üzerinden güvenle ödeme yapın. 3 gün boyunca ücretsiz deneyin, istediğiniz zaman iptal edin.',
       },
+      {
+        title: 'Çok Dilli Destek',
+        description: 'İngilizce, Türkçe, Almanca ve İspanyolca dillerinde mevcut. TinyLapse\'i tercih ettiğiniz dilde kullanın.',
+      },
     ],
   },
 
@@ -468,7 +472,7 @@ export const tr: Translation = {
       },
       {
         title: '5. Abonelikler ve Ödemeler',
-        content: 'TinyLapse hem ücretsiz hem de premium özellikler sunar:',
+        content: 'TinyLapse, 3 günlük ücretsiz deneme ile abonelik tabanlı bir hizmettir:',
         items: [
           'Abonelikler Apple App Store üzerinden yönetilir ve Apple\'ın şartlarına tabidir',
           'Satın alma onayında Apple ID hesabınızdan ücretlendirilirsiniz',
