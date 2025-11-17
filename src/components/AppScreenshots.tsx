@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useLanguage } from '../hooks/useLanguage'
 
 interface Screenshot {
@@ -13,6 +13,9 @@ export default function AppScreenshots() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
+  const [isDragging, setIsDragging] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
 
   const screenshotImages = ['/albumspage.PNG', '/videopage.PNG', '/videoeditorpage.PNG', '/accountpage.PNG']
 
@@ -36,6 +39,64 @@ export default function AppScreenshots() {
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
     }
   }
+
+  // Mouse drag handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return
+    setIsDragging(true)
+    setStartX(e.pageX - scrollRef.current.offsetLeft)
+    setScrollLeft(scrollRef.current.scrollLeft)
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return
+    e.preventDefault()
+    const x = e.pageX - scrollRef.current.offsetLeft
+    const walk = (x - startX) * 2
+    scrollRef.current.scrollLeft = scrollLeft - walk
+  }
+
+  const handleMouseUp = () => {
+    setIsDragging(false)
+  }
+
+  const handleMouseLeave = () => {
+    setIsDragging(false)
+  }
+
+  // Touch drag handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!scrollRef.current) return
+    setIsDragging(true)
+    setStartX(e.touches[0].pageX - scrollRef.current.offsetLeft)
+    setScrollLeft(scrollRef.current.scrollLeft)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !scrollRef.current) return
+    const x = e.touches[0].pageX - scrollRef.current.offsetLeft
+    const walk = (x - startX) * 2
+    scrollRef.current.scrollLeft = scrollLeft - walk
+  }
+
+  const handleTouchEnd = () => {
+    setIsDragging(false)
+  }
+
+  useEffect(() => {
+    const ref = scrollRef.current
+    if (!ref) return
+
+    const preventClick = (e: MouseEvent) => {
+      if (isDragging) {
+        e.preventDefault()
+        e.stopPropagation()
+      }
+    }
+
+    ref.addEventListener('click', preventClick, true)
+    return () => ref.removeEventListener('click', preventClick, true)
+  }, [isDragging])
 
   return (
     <section className="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
@@ -79,10 +140,18 @@ export default function AppScreenshots() {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory px-4 md:px-12 pb-8"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className={`flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory px-4 md:px-12 pb-8 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
+              userSelect: isDragging ? 'none' : 'auto',
             }}
           >
             {screenshots.map((screenshot, index) => (
