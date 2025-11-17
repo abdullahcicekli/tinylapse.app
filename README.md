@@ -40,6 +40,7 @@ TinyLapse is a beautiful, responsive marketing website designed to showcase the 
 - 📧 Contact form integration
 - 📄 FAQ accordion
 - 🔐 Privacy Policy & Terms pages
+- 🌍 Multi-language support (English, Turkish, Spanish, German)
 
 ---
 
@@ -54,10 +55,11 @@ TinyLapse is a beautiful, responsive marketing website designed to showcase the 
 - **404** - Custom not found page
 
 ### Components
-- **Header** - Fixed navigation with mobile menu
+- **Header** - Fixed navigation with mobile menu and language selector
 - **Footer** - Multi-column footer with links
 - **Hero** - Eye-catching hero section with CTAs
 - **Features** - 9 feature cards with icons
+- **AppScreenshots** - Interactive screenshot carousel with drag & drop
 - **HowItWorks** - 4-step timeline
 - **UseCases** - 6 use case cards
 - **Testimonials** - Customer reviews
@@ -65,6 +67,32 @@ TinyLapse is a beautiful, responsive marketing website designed to showcase the 
 - **FAQAccordion** - Expandable Q&A
 - **ContactForm** - Form with validation
 - **SEO** - Dynamic meta tags and structured data
+
+---
+
+## 🌍 Internationalization
+
+The website supports multiple languages with a seamless language switching experience:
+
+### Supported Languages
+- 🇬🇧 **English** - Default language
+- 🇹🇷 **Turkish** (Türkçe)
+- 🇪🇸 **Spanish** (Español)
+- 🇩🇪 **German** (Deutsch)
+
+### Features
+- Language selector in header navigation
+- Persistent language preference (localStorage)
+- Fully translated content across all pages
+- Type-safe translations with TypeScript
+- Easy to add new languages
+
+### Adding a New Language
+
+1. Create a new translation file in `src/locales/` (e.g., `fr.ts` for French)
+2. Copy the structure from `en.ts` and translate all strings
+3. Add the new locale to `src/locales/index.ts`
+4. Update the language selector in `Header.tsx`
 
 ---
 
@@ -91,6 +119,7 @@ tinylapse-vite/
 │   │   ├── Footer.tsx          # Site footer
 │   │   ├── Hero.tsx            # Hero section
 │   │   ├── Features.tsx        # Features grid
+│   │   ├── AppScreenshots.tsx  # Screenshot carousel
 │   │   ├── HowItWorks.tsx      # Timeline steps
 │   │   ├── UseCases.tsx        # Use case cards
 │   │   ├── Testimonials.tsx    # Customer reviews
@@ -105,6 +134,17 @@ tinylapse-vite/
 │   │   ├── Privacy.tsx         # Privacy policy
 │   │   ├── Terms.tsx           # Terms & conditions
 │   │   └── NotFound.tsx        # 404 page
+│   ├── contexts/
+│   │   └── LanguageContext.tsx # Language state management
+│   ├── hooks/
+│   │   └── useLanguage.ts      # Language hook
+│   ├── locales/
+│   │   ├── en.ts               # English translations
+│   │   ├── tr.ts               # Turkish translations
+│   │   ├── es.ts               # Spanish translations
+│   │   ├── de.ts               # German translations
+│   │   ├── types.ts            # Translation types
+│   │   └── index.ts            # Locale exports
 │   ├── App.tsx                 # Main app component
 │   ├── main.tsx                # Entry point
 │   ├── router.tsx              # Route configuration
